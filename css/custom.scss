@@ -1,0 +1,940 @@
+// custom.scss
+
+/* ***** RUN npm run build-css AFTER EVERY CHANGE IN THIS FILE ***** */
+
+// Override Bootstrap variables before importing Bootstrap
+$primary: #D1FF0A;
+$secondary: #32323cff;
+$success: #8cfa69ff;
+$info: #6ecdfaff;
+$warning: #fafa7dff;
+$danger: #f0a069ff;
+$light: #dee3e6;
+$dark: #32323cff;
+$white: #ffffff;
+
+$gray: #78909c; // Light gray for backgrounds
+$extra2: #444444; // Dark gray for icons
+
+
+// Color sets
+.colorSet1 {
+    background-color: $primary;
+    color: $secondary;
+}
+
+.colorSet2 {
+    background-color: $primary;
+    color: $gray;
+}
+
+.colorSet3 {
+    background-color: $secondary;
+    color: $primary;
+}
+
+.colorSet4 {
+    background-color: $secondary;
+    color: $gray;
+}
+
+.colorSet5 {
+    background-color: $light;
+    color: $secondary;
+}
+
+.colorSet6 {
+    background-color: $light;
+    color: $gray;
+}
+
+.colorSet7 {
+    background-color: $gray;
+    color: $secondary;
+}
+
+.colorSet8 {
+    background-color: $gray;
+    color: $primary;
+}
+
+
+// Override navbar active link color
+$navbar-active-color: white;
+$navbar-nav-link-active-color: white;
+$navbaremphasis-color-rgb: white;
+$emphasis-color-rgb: $white;
+
+/* Import Google Fonts */
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+// Override Bootstrap variables before importing Bootstrap
+// $font-family-sans-serif: 'Inter', Arial, sans-serif;
+// $body-font-family: 'Inter', Arial, sans-serif;
+$font-family-sans-serif: 'Montserrat', Arial, sans-serif;
+$body-font-family: 'Montserrat', Arial, sans-serif;
+$body-font-size: 1.2rem;
+/* Adjust the base font size here */
+$body-line-height: 1.5;
+$spacer: 1rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+// **********  Global **********
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    /* Light background for a minimal look */
+}
+
+h2,
+h3 {
+    font-weight: 700;
+    color: $dark;
+}
+
+// Icon circle styles
+// Icon circle styles
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 3rem;
+    /* Ensure the icons are large */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+// Apply color sets to icon circles
+.colorSet1 {
+    background-color: $primary;
+    color: $secondary;
+}
+
+.colorSet2 {
+    background-color: $primary;
+    color: $gray;
+}
+
+.colorSet3 {
+    background-color: $secondary;
+    color: $primary;
+}
+
+.colorSet4 {
+    background-color: $secondary;
+    color: $gray;
+}
+
+.colorSet5 {
+    background-color: $light;
+    color: $secondary;
+}
+
+.colorSet6 {
+    background-color: $light;
+    color: $gray;
+}
+
+.colorSet7 {
+    background-color: $gray;
+    color: $secondary;
+}
+
+.colorSet8 {
+    background-color: $gray;
+    color: $primary;
+}
+
+
+// **********  Navbar  **********
+$navbar-color: rgba($white, 0.65);
+$navbar-hover-color: rgba($white, 0.8);
+$navbar-disabled-color: rgba($white, 0.3);
+$navbar-active-color: $white;
+$navbar-brand-color: $white;
+$navbar-brand-hover-color: $white;
+
+.nav-link {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-link.active,
+.nav-link.show {
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: $light;
+    font-weight: 100;
+}
+
+
+
+// **********  Jumbo  **********
+
+.jumbotron {
+    background-color: #32323c;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+
+.btn-primary {
+    background-color: $primary;
+    /* Use primary color */
+    border: none;
+    color: $dark;
+    /* Text color */
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    /* Rounded button */
+    box-shadow: 0 5px 10px rgba($primary, 0.2);
+    /* Initial shadow */
+
+    &:hover {
+        background-color: lighten($primary, 10%);
+        /* Lighter background on hover */
+        box-shadow: 0 8px 15px rgba($primary, 0.4);
+        /* More pronounced shadow on hover */
+    }
+
+    &:active {
+        background-color: darken($primary, 10%);
+        /* Darker background on click */
+        box-shadow: 0 4px 8px rgba($primary, 0.1);
+        /* Less shadow on click */
+    }
+}
+
+
+
+
+.notLead {
+    color: $light;
+}
+
+.animatedImg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    animation: pulse 2s infinite;
+    /* Example animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+// **********  Sections  **********
+
+.section {
+    padding: 60px 0;
+    background-color: #fff;
+    /* White background for minimalistic look */
+    border-bottom: 1px solid #eee;
+    /* Subtle border to separate sections */
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: $dark;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: $dark;
+}
+
+.section p {
+    color: $dark;
+    line-height: 1.7;
+}
+
+.section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section .col-md-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section .col-md-4 p {
+    font-size: 1rem;
+    color: $dark;
+}
+
+
+
+
+
+// **********  Services  **********
+
+.services {
+    background-color: #fff;
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #32323c;
+        margin-bottom: 40px;
+    }
+
+    .col-md-4 {
+        margin-bottom: 30px;
+        text-align: center;
+
+        i {
+            color: $primary;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #32323c;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+}
+
+
+
+
+
+// **********  Approach  **********
+
+
+#approach {
+    background: linear-gradient(to right, #32323c, #4b4b5a); // Adjust background as needed
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: $primary; // Use theme primary color
+    }
+
+    .timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; // Align items to the top
+        position: relative;
+        padding: 0 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        flex-wrap: nowrap; // Ensure wrapping on smaller screens
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 22px; // Adjust to the center of the circles
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $primary; // Line color
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .timeline-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2; // Ensure the circles are above the line
+            flex: 1;
+            min-width: 200px; // Ensure it doesn't get too small
+            margin-bottom: 20px; // Add some margin for better spacing on smaller screens
+
+            .timeline-point {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: $secondary; // Circle color
+                color: $primary; // Number color
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+                margin-bottom: 15px;
+                border: 4px solid $primary; // Border color
+            }
+
+            .timeline-content {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                max-width: 250px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: $primary; // Heading color
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .timeline {
+            flex-direction: column; // Stack items vertically on smaller screens
+            align-items: center;
+
+            &::before {
+                top: 20px;
+                bottom: auto;
+                left: 10%;
+                right: 10%;
+                height: 2px; // Make the line thinner on smaller screens
+            }
+
+            .timeline-step {
+                margin-bottom: 40px; // Add more space between steps
+
+                &:last-child {
+                    margin-bottom: 0; // Remove margin from the last step
+                }
+
+                .timeline-point {
+                    margin-bottom: 10px;
+                }
+
+                .timeline-content {
+                    max-width: 100%; // Make sure the content fits well on smaller screens
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// **********  Features  **********
+
+#features {
+    // Container for feature cards
+    .feature-card {
+        position: relative; // Allow absolute positioning of child elements
+        text-align: center; // Center align text inside the card
+        border-radius: 10px; // Rounded corners for the card
+        overflow: hidden; // Hide content that overflows the card boundaries
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Add a subtle shadow to the card
+        transition: transform 0.3s, height 0.3s; // Smooth transition for transform and height changes
+        background: rgba(255, 255, 255, 0.9); // Slightly transparent white background for the card
+        padding: 20px; // Padding inside the card
+        height: 400px; // Fixed height for the card to prevent collapsing
+        margin-bottom: 20px; // Space below each card
+
+        // Lift the card slightly on hover
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        // Image inside the card
+        .feature-image {
+            width: 100%; // Ensure the image width fits within the card
+            max-width: 75%; // Set a maximum width for the image
+            transition: transform 0.3s, top 0.3s; // Smooth transition for transform and top changes
+            position: relative; // Relative positioning for top adjustment
+            top: 10px; // Slightly lower the image initially
+            margin-bottom: 20px; // Space below the image
+        }
+
+        // Adjust the image and show detailed text on card hover
+        &:hover .feature-image {
+            transform: scale(0.5); // Reduce the image size smoothly on hover
+            top: -50px; // Align the image to the top on hover
+        }
+
+        // Title inside the card
+        .feature-title {
+            margin-top: 15px; // Space above the title
+            font-size: 1.5rem; // Font size for the title
+            color: $dark; // Dark color for the title text
+            transition: margin-bottom 0.3s; // Smooth transition for margin-bottom changes
+            position: absolute; // Position title at the bottom
+            bottom: 0px; // Space from the bottom
+            left: 50%; // Center align horizontally
+            transform: translateX(-50%); // Center align using translation
+            width: calc(100% - 40px); // Adjust width to account for card padding
+        }
+
+        // Detailed text inside the card
+        .feature-details {
+            height: 115px;
+            position: absolute; // Absolute positioning within the card
+            bottom: 80px; // Position the detailed text at the bottom
+            left: 50%; // Center align the text horizontally
+            transform: translateX(-50%); // Center the text using translation
+            width: calc(100% - 40px); // Adjust width to account for card padding
+            padding: 20px; // Padding inside the detailed text box
+            background: rgba($primary, 0.7); // Dark background with transparency
+            color: $dark; // White color for the text
+            font-weight: bold;
+            opacity: 0; // Initially hidden
+            border-radius: 15px; // Rounded corners for the detailed text box
+            text-align: center; // Center align the text inside the detailed text box
+            transition: opacity 0.3s, transform 0.3s; // Smooth transition for opacity and transform changes
+
+            // Show the detailed text on card hover
+            &:hover {
+                opacity: 1; // Make the detailed text visible on hover
+            }
+        }
+
+        // Ensure the detailed text appears when hovering any part of the card
+        &:hover .feature-details {
+            opacity: 1; // Make the detailed text visible on hover
+        }
+    }
+
+    .row {
+        display: flex; // Use flexbox for layout
+        flex-wrap: wrap; // Wrap items to new lines if necessary
+        margin-top: 30px; // Space above the row
+
+        @media (max-width: 1200px) {
+            .col-lg-4 {
+                flex: 0 0 50%; // Make columns take up half the row width
+                max-width: 50%; // Set the maximum width for columns
+            }
+        }
+
+        @media (max-width: 768px) {
+            .col-lg-4, .col-md-6 {
+                flex: 0 0 100%; // Make columns take up full row width on small screens
+                max-width: 100%; // Set the maximum width for columns on small screens
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// **********  About us  **********
+
+// Parallax Section
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    height: 80vh; // Adjusted height for wide screens
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        height: auto; // Allow height to adjust for narrow screens
+        padding: 60px 0; // Add padding to create space for the content
+    }
+
+    .parallax-bg {
+        background: url('/img/team/team.jpg') no-repeat center center fixed;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // Darker tone overlay
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        padding: 20px; // Add padding inside the columns
+
+        @media (max-width: 768px) {
+            padding: 40px; // Increase padding for narrow screens
+        }
+    }
+
+    h2 {
+        color: $primary;
+    }
+}
+
+// About Content
+.about-content {
+    background: rgba($secondary, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: $primary;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px; // Adjust padding for narrow screens
+    }
+}
+
+// Team Content
+.team-content {
+    background: rgba($primary, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+
+    .team-member {
+        text-align: center;
+        margin-bottom: 30px;
+
+        .animated-icon {
+            margin-bottom: 15px;
+            animation: pulse 2s infinite; // Example animation
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 15px;
+            color: $dark;
+        }
+
+        p {
+            font-size: 1.2rem; // Match font size with the about-content paragraph
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px; // Adjust padding for narrow screens
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+// **********  Contact Us  **********
+
+
+// Contact Us Styles
+#contact {
+    background: #f8f9fa;
+    color: $dark;
+    padding: 60px 0;
+    
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $secondary;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+
+        .contact-method {
+            background: rgba($dark, 0.9); // Darker tone for better visibility
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            i {
+                margin-bottom: 15px;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $light;
+                margin-bottom: 10px;
+            }
+            
+            p {
+                color: #ccc;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            a {
+                color: $success;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+                
+                i {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// **********  FAQs  **********
+
+#faqs {
+    .faq-questions, .faq-answers {
+        padding: 15px;
+    }
+
+    .faq-questions {
+        .faq-item {
+            padding: 15px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s, border-left 0.3s;
+            position: relative;
+
+            .faq-question {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: $dark;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 10px;
+                    color: $success;
+                }
+            }
+
+            &:hover {
+                .faq-question {
+                    border-bottom: 5px solid $success;
+                }
+            }
+        }
+    }
+
+    .faq-answers {
+        position: relative;
+        
+        .faq-answer {
+            font-size: 1.2rem;
+            color: $dark;
+            padding: 20px;
+            border-left: 5px solid $success;
+            background-color: rgba($success, 0.2); // Darker transparent background
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            display: none; // Hide initially
+
+            &.active {
+                display: block;
+                max-height: 300px; /* Adjust as needed */
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .faq-answers {
+            .faq-answer {
+                border-left: none;
+                background-color: transparent;
+                padding-left: 0;
+                margin-bottom: 0;
+                position: relative;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// **********  Footer  **********
+
+.footer {
+    background-color: #32323c;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .list-inline {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.footer .list-inline-item {
+    margin-right: 20px;
+}
+
+.footer .list-inline-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+.footer .text-center {
+    text-align: center;
+}
