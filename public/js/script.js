@@ -93,14 +93,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// ********** OpenAI Assistant Bot **********
-// https://platform.openai.com/docs/assistants/overview?lang=node.js
+// ********** Chatbot ChatGPT OpenAI Assistant  **********
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('sendMessageButton').addEventListener('click', async () => {
-        const message = document.getElementById('userMessage').value;
+document.getElementById('chatbotButton').addEventListener('click', function () {
+    document.getElementById('chatbotContainer').style.display = 'flex';
+});
 
-        console.log('Sending message:', message);
+document.getElementById('closeChatbot').addEventListener('click', function () {
+    document.getElementById('chatbotContainer').style.display = 'none';
+});
+
+document.getElementById('sendMessageButton').addEventListener('click', sendMessage);
+
+document.getElementById('userMessage').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+async function sendMessage() {
+    const userMessage = document.getElementById('userMessage').value;
+    if (userMessage.trim() !== '') {
+        const chatBox = document.getElementById('chatBox');
+        const userBubble = document.createElement('div');
+        userBubble.classList.add('chat-message', 'user');
+        userBubble.innerHTML = `<div class="message-bubble">${userMessage}</div>`;
+        chatBox.appendChild(userBubble);
+        document.getElementById('userMessage').value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        console.log('Sending message:', userMessage);
 
         try {
             const response = await fetch('http://localhost:3000/chat', {
@@ -108,16 +130,91 @@ document.addEventListener('DOMContentLoaded', function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ message })
+                body: JSON.stringify({ message: userMessage })
             });
 
             const data = await response.json();
             console.log('Received response:', data);
-            document.getElementById('chatBox').innerHTML += `<p>User: ${message}</p><p>Assistant: ${data.reply}</p>`;
+
+            const assistantBubble = document.createElement('div');
+            assistantBubble.classList.add('chat-message', 'assistant');
+            assistantBubble.innerHTML = `<div class="message-bubble">${data.reply}</div>`;
+            chatBox.appendChild(assistantBubble);
+            chatBox.scrollTop = chatBox.scrollHeight;
         } catch (error) {
             console.error('Error:', error);
-            document.getElementById('chatBox').innerHTML += `<p>Error: ${error.message}</p>`;
+            const errorBubble = document.createElement('div');
+            errorBubble.classList.add('chat-message', 'error');
+            errorBubble.innerHTML = `<div class="message-bubble">Error: ${error.message}</div>`;
+            chatBox.appendChild(errorBubble);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Emoji picker setup
+    const emojiPicker = document.createElement('emoji-picker');
+    document.body.appendChild(emojiPicker);
+    emojiPicker.style.position = 'absolute';
+    emojiPicker.style.display = 'none';
+    emojiPicker.style.zIndex = '1000'; // Ensure it's above other elements
+    console.log('Emoji picker element created and appended to DOM');
+
+    const emojiButton = document.querySelector('.emoji-button');
+    emojiButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Emoji button clicked');
+        if (emojiPicker.style.display === 'block') {
+            emojiPicker.style.display = 'none';
+            console.log('Emoji picker hidden');
+        } else {
+            emojiPicker.style.display = 'block';
+            const rect = emojiButton.getBoundingClientRect();
+            emojiPicker.style.left = `${rect.left}px`;
+            emojiPicker.style.top = `${rect.bottom}px`;
+            console.log('Emoji picker shown at:', emojiPicker.style.left, emojiPicker.style.top);
         }
     });
+
+    emojiPicker.addEventListener('emoji-click', event => {
+        console.log('Emoji clicked:', event.detail);
+        const input = document.querySelector('#userMessage');
+        input.value += event.detail.unicode;
+        emojiPicker.style.display = 'none';
+        console.log('Emoji picker hidden after selection');
+    });
+
+    // Hide emoji picker when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!emojiPicker.contains(e.target) && !emojiButton.contains(e.target)) {
+            emojiPicker.style.display = 'none';
+            console.log('Emoji picker hidden on outside click');
+        }
+    });
+
+    // File attachment setup
+    const attachButton = document.querySelector('.attach-button');
+    attachButton.addEventListener('click', () => {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.style.display = 'none';
+        document.body.appendChild(fileInput);
+        fileInput.click();
+        fileInput.addEventListener('change', () => {
+            const file = fileInput.files[0];
+            if (file) {
+                alert('File selected: ' + file.name);
+                // Handle the file upload logic here
+            }
+            document.body.removeChild(fileInput);
+        });
+    });
 });
+
+
+
+
+
 

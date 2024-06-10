@@ -407,69 +407,99 @@
             </div>
         </section>
 
+    </main>
+
+    <!-- Floating Buttons -->
+    <a href="#" class="scroll-to-top" id="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/525523386554" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#" class="chatbot-button" id="chatbotButton">
+        <i class="fas fa-comments"></i>
+    </a>
+
+    <!-- Chatbot Floating Widget -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="header-title">
+                <img src="img/logo/logo.png" alt="Profile Picture" class="profile-picture">
+                <h2>TalentQuery<br>
+                    <p>Virtual Assistant</p>
+                </h2>
+            </div>
+            <button id="closeChatbot" class="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-status" id="chatbotStatus">
+            <div class="waves-background"></div>
+            <p>We are online!</p>
+        </div>
+        <div id="chatBox" class="chat-box">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div class="chat-input-container">
+            <button class="emoji-button"><i class="fas fa-smile"></i></button>
+            <button class="attach-button"><i class="fas fa-paperclip"></i></button>
+            <input type="text" id="userMessage" class="chat-input" placeholder="Enter your message...">
+            <button id="sendMessageButton" class="chat-send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
 
 
-        <!-- Floating Up Arrow Button -->
-        <a href="#" class="scroll-to-top" id="scrollToTopBtn">
-            <i class="fas fa-arrow-up"></i>
-        </a>
 
 
 
 
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>Company</h3>
-                        <ul>
-                            <li><a href="#navbar">Home</a></li>
-                            <li><a href="#about-us">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#faqs">FAQs</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#terms">Terms of Service</a></li>
-                            <li><a href="#privacy">Privacy Policy</a></li>
-                            <li><a href="#cookies">Cookie Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h3>Follow Us</h3>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#">LinkedIn</a></li>
-                            <li class="list-inline-item"><a href="#">Facebook</a></li>
-                            <li class="list-inline-item"><a href="#">Instagram</a></li>
-                            <li class="list-inline-item"><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#navbar">Home</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
                 </div>
-                <div class="row mt-4">
-                    <div class="col text-center">
-                        <p>&copy; 2024 TalentQuery. All rights reserved.</p>
-                    </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Follow Us</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">LinkedIn</a></li>
+                        <li class="list-inline-item"><a href="#">Facebook</a></li>
+                        <li class="list-inline-item"><a href="#">Instagram</a></li>
+                        <li class="list-inline-item"><a href="#">Twitter</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- WhatsApp Button -->
-            <a href="https://wa.me/525523386554" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-
-
-        </footer>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>&copy; 2024 TalentQuery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
 
 
-        <!-- OpenAI Assistant Bot -->
-        <section id="chatbot" class="py-5">
+    </footer>
+
+
+    <!-- OpenAI Assistant Bot -->
+    <!-- <section id="chatbot" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-4">Chat with Us</h2>
                 <div class="row">
@@ -480,16 +510,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
-    </main>
+
 
 </body>
 
 <!-- Include Popper.js and Bootstrap JS -->
 <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.3.0/dist/emoji-picker.min.js"></script>
 <script src="js/script.js"></script>
 
 

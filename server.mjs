@@ -1,3 +1,5 @@
+// server.mjs
+
 import express from 'express';
 import cors from 'cors';
 import OpenAI from 'openai';
