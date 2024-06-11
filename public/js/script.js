@@ -217,3 +217,205 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// ********** Google Analytics Event Tracking **********
+
+// Smooth scrolling with event tracking
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+        gtag('event', 'navigation_click', {
+            event_category: 'Navigation',
+            event_label: this.getAttribute('href').substring(1)
+        });
+    });
+});
+
+// Jumbotron button click tracking
+document.querySelectorAll('.jumbotron a.btn').forEach(button => {
+    button.addEventListener('click', function () {
+        gtag('event', 'jumbotron_click', {
+            event_category: 'Jumbotron',
+            event_label: this.textContent.trim()
+        });
+    });
+});
+
+// Services section interaction tracking
+document.querySelectorAll('#services .icon-circle, #services h3, #services p').forEach(element => {
+    element.addEventListener('click', function () {
+        gtag('event', 'service_interaction', {
+            event_category: 'Services',
+            event_label: this.textContent.trim() || 'Service Element'
+        });
+    });
+});
+
+// Approach section interaction tracking
+document.querySelectorAll('#approach .timeline-step, #approach h3, #approach p').forEach(element => {
+    element.addEventListener('click', function () {
+        gtag('event', 'approach_interaction', {
+            event_category: 'Approach',
+            event_label: this.textContent.trim() || 'Approach Element'
+        });
+    });
+});
+
+// Features section interaction tracking
+document.querySelectorAll('#features .feature-card, #features h3, #features p').forEach(element => {
+    element.addEventListener('click', function () {
+        gtag('event', 'feature_interaction', {
+            event_category: 'Features',
+            event_label: this.textContent.trim() || 'Feature Element'
+        });
+    });
+});
+
+// About Us section interaction tracking
+document.querySelectorAll('#about-us .about-content, #about-us .team-content, #about-us h3, #about-us p').forEach(element => {
+    element.addEventListener('click', function () {
+        gtag('event', 'about_us_interaction', {
+            event_category: 'About Us',
+            event_label: this.textContent.trim() || 'About Us Element'
+        });
+    });
+});
+
+// Contact Us section interaction tracking
+document.querySelectorAll('#contact .contact-method, #contact h3, #contact p, #contact a').forEach(element => {
+    element.addEventListener('click', function () {
+        gtag('event', 'contact_us_interaction', {
+            event_category: 'Contact Us',
+            event_label: this.textContent.trim() || 'Contact Element'
+        });
+    });
+});
+
+// Track FAQ item clicks
+let isAnimating2 = false;
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        if (isAnimating2) return;
+        const target = item.getAttribute('data-target');
+        const newAnswer = document.querySelector(target);
+        if (newAnswer.classList.contains('active')) return;
+        const activeAnswers = document.querySelectorAll('.faq-answer.active');
+        activeAnswers.forEach(answer => {
+            answer.style.opacity = '0';
+            answer.style.maxHeight = '0';
+            answer.classList.remove('active');
+        });
+        isAnimating2 = true;
+        setTimeout(() => {
+            activeAnswers.forEach(answer => {
+                answer.style.display = 'none';
+            });
+            newAnswer.style.display = 'block';
+            newAnswer.style.opacity = '0';
+            newAnswer.style.maxHeight = '0';
+            newAnswer.classList.add('active');
+            setTimeout(() => {
+                newAnswer.style.opacity = '1';
+                newAnswer.style.maxHeight = '300px';
+                isAnimating2 = false;
+            }, 10);
+        }, 500);
+
+        gtag('event', 'faq_click', {
+            event_category: 'FAQ',
+            event_label: target
+        });
+    });
+});
+
+// Scroll to top button with event tracking
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const rootElement = document.documentElement;
+
+    const handleScroll = () => {
+        if (rootElement.scrollTop > 200) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    };
+
+    const scrollToTop = (e) => {
+        e.preventDefault();
+        rootElement.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        gtag('event', 'scroll_to_top', {
+            event_category: 'Button',
+            event_label: 'Scroll to Top'
+        });
+    };
+
+    document.addEventListener('scroll', handleScroll);
+    scrollToTopBtn.addEventListener('click', scrollToTop);
+});
+
+// Contact form submission with event tracking
+/* document.getElementById('exampleForm').addEventListener('submit', function () {
+    gtag('event', 'form_submit', {
+        event_category: 'Form',
+        event_label: 'Contact Form'
+    });
+}); */
+
+// Track all button clicks
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', function () {
+        gtag('event', 'button_click', {
+            event_category: 'Button',
+            event_label: this.textContent.trim()
+        });
+    });
+});
+
+// Track video plays
+document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('play', function () {
+        gtag('event', 'video_play', {
+            event_category: 'Video',
+            event_label: this.getAttribute('id') || 'Video'
+        });
+    });
+});
+
+// Track WhatsApp clicks
+document.querySelector('.whatsapp-button').addEventListener('click', function () {
+    gtag('event', 'whatsapp_click', {
+        event_category: 'WhatsApp',
+        event_label: 'WhatsApp Button'
+    });
+});
+
+// Track ChatGPT bot interactions
+document.getElementById('chatbotButton').addEventListener('click', function () {
+    gtag('event', 'chatbot_open', {
+        event_category: 'ChatBot',
+        event_label: 'ChatBot Open'
+    });
+});
+
+document.getElementById('closeChatbot').addEventListener('click', function () {
+    gtag('event', 'chatbot_close', {
+        event_category: 'ChatBot',
+        event_label: 'ChatBot Close'
+    });
+});
+
+// Track all other clickable links
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function () {
+        gtag('event', 'link_click', {
+            event_category: 'Link',
+            event_label: this.href
+        });
+    });
+});
