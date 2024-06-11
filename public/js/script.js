@@ -111,7 +111,7 @@ async function sendMessage() {
         console.log('Sending message:', userMessage);
 
         try {
-            const response = await fetch('https://www.talentquery.io/chat', {
+            const response = await fetch('https://talentquery.io/chat', { // Ensure this URL matches your backend
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
