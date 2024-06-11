@@ -97,6 +97,8 @@ document.getElementById('userMessage').addEventListener('keypress', function (e)
     }
 });
 
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/chat' : 'https://talentquery.io/chat';
+
 async function sendMessage() {
     const userMessage = document.getElementById('userMessage').value;
     if (userMessage.trim() !== '') {
@@ -111,7 +113,8 @@ async function sendMessage() {
         console.log('Sending message:', userMessage);
 
         try {
-            const response = await fetch('https://talentquery.io/chat', { // Ensure this URL matches your backend
+            // const response = await fetch('https://talentquery.io/chat', { // Ensure this URL matches your backend
+            const response = await fetch(apiUrl, { // Ensure this URL matches your backend
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
