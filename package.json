@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass public/css/custom.scss public/css/custom.css",
-    "build": "npm run build-css"
+    "build-css": "sass public_html/css/custom.scss public_html/css/custom.css",
+    "build": "npm install && npm run build-css",
+    "start": "pm2 start server.mjs --name talentquery"
   },
   "author": "Jorge Guzman",
   "license": "ISC",
