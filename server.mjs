@@ -27,7 +27,7 @@ app.use(cors({
 app.use(express.json());
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public_html')));
 
 // Serve static files from the 'node_modules' directory
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
