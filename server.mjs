@@ -20,7 +20,7 @@ const openai = new OpenAI({
 });
 
 app.use(cors({
-  origin: 'https://talentquery.io', // Replace with your actual domain
+  origin: ['https://talentquery.io', 'https://www.talentquery.io'], // Replace with your actual domain
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));

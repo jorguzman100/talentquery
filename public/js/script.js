@@ -119,6 +119,10 @@ async function sendMessage() {
                 body: JSON.stringify({ message: userMessage })
             });
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+
             const data = await response.json();
             console.log('Received response:', data);
 
