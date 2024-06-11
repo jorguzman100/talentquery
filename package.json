@@ -1,12 +1,13 @@
 {
-  "name": "y",
+  "name": "talentquery",
   "version": "1.0.0",
   "description": "IT Recruiting Agency Website",
-  "main": "script.js",
+  "main": "server.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass public/css/custom.scss public/css/custom.css"
+    "build-css": "sass public/css/custom.scss public/css/custom.css",
+    "build": "npm run build-css"
   },
   "author": "Jorge Guzman",
   "license": "ISC",

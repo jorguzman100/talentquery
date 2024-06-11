@@ -1,19 +1,5 @@
 // script.js
 
-// ********** Smooth scrolling **********
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
-
 
 // ********** FAQs **********
 
@@ -125,7 +111,7 @@ async function sendMessage() {
         console.log('Sending message:', userMessage);
 
         try {
-            const response = await fetch('http://localhost:3000/chat', {
+            const response = await fetch('https://www.talentquery.io/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -223,15 +209,31 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-        gtag('event', 'navigation_click', {
-            event_category: 'Navigation',
-            event_label: this.getAttribute('href').substring(1)
-        });
+
+        // Get the href attribute
+        const href = this.getAttribute('href');
+
+        // Check if href is valid and not just "#"
+        if (href && href.length > 1) {
+            // Try to find the element
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                gtag('event', 'navigation_click', {
+                    event_category: 'Navigation',
+                    event_label: href.substring(1)
+                });
+            } else {
+                console.warn(`Element not found for selector: ${href}`);
+            }
+        } else {
+            console.warn(`Invalid href: ${href}`);
+        }
     });
 });
+
 
 // Jumbotron button click tracking
 document.querySelectorAll('.jumbotron a.btn').forEach(button => {
@@ -359,13 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToTopBtn.addEventListener('click', scrollToTop);
 });
 
-// Contact form submission with event tracking
-/* document.getElementById('exampleForm').addEventListener('submit', function () {
-    gtag('event', 'form_submit', {
-        event_category: 'Form',
-        event_label: 'Contact Form'
-    });
-}); */
 
 // Track all button clicks
 document.querySelectorAll('button').forEach(button => {
