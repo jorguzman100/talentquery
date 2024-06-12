@@ -105,7 +105,7 @@ document.getElementById('userMessage').addEventListener('keypress', function (e)
     }
 });
 
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/chat' : 'https://talentquery-2374c97375e0.herokuapp.com/chat';
+const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/chat' : 'https://talentquery.io/chat';
 
 async function sendMessage() {
     const userMessage = document.getElementById('userMessage').value;

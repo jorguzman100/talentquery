@@ -19,7 +19,7 @@ const openai = new OpenAI({
 });
 
 app.use(cors({
-  origin: ['https://talentquery-2374c97375e0.herokuapp.com', 'https://www.talentquery-2374c97375e0.herokuapp.com', 'http://localhost:3000'], // Replace with your actual domain
+  origin: ['https://talentquery.io', 'https://www.talentquery.io', 'http://localhost:3000'], // Replace with your actual domain
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
@@ -34,7 +34,7 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com"],
       imgSrc: ["'self'", "data:", "https://www.google-analytics.com"],
-      connectSrc: ["'self'", "https://talentquery-2374c97375e0.herokuapp.com", "https://region1.google-analytics.com"],
+      connectSrc: ["'self'", "https://talentquery.io", "https://region1.google-analytics.com"],
     }
   }
 }));
