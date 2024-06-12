@@ -32,12 +32,13 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com", "https://cdnjs.cloudflare.com"],
       imgSrc: ["'self'", "data:", "https://www.google-analytics.com"],
-      connectSrc: ["'self'", "https://talentquery.io"],
+      connectSrc: ["'self'", "https://talentquery.io", "https://region1.google-analytics.com"],
     }
   }
 }));
+
 
 app.use(express.static(path.join(__dirname, 'public_html')));
 
