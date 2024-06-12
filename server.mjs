@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import helmet from 'helmet';  // Import Helmet for security headers
+import helmet from 'helmet';
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -25,22 +25,20 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Helmet configuration to allow necessary scripts
 app.use(helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "https://www.googletagmanager.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net"],
-      connectSrc: ["'self'", "https://talentquery.io"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com", "https://cdnjs.cloudflare.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https://www.google-analytics.com"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
-      fontSrc: ["'self'", "https://fonts.googleapis.com", "https://fonts.gstatic.com"],
+      connectSrc: ["'self'", "https://talentquery.io"],
     }
   }
 }));
 
-// Serve static files from the 'public_html' directory
 app.use(express.static(path.join(__dirname, 'public_html')));
 
 app.post('/chat', async (req, res) => {
