@@ -2,6 +2,7 @@
 
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';  // Import Helmet for security headers
 import OpenAI from 'openai';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -25,6 +26,8 @@ app.use(cors({
   allowedHeaders: ['Content-Type']
 }));
 app.use(express.json());
+app.use(helmet());  // Use Helmet for setting security headers
+
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public_html')));
@@ -102,7 +105,8 @@ app.post('/chat', async (req, res) => {
     }
 
   } catch (error) {
-    console.error('Error:', error);
+    console.error('+++++++++ Message from your server side ++++++++++');
+    console.error('Error in /chat endpoint:)', error);
     return res.status(500).json({ error: error.message });
   }
 });
