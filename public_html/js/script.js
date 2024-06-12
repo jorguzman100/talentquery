@@ -3,7 +3,7 @@
 // ********** Initialize Google Analytics **********
 
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-E5DPBJ3KSE');
 
@@ -105,7 +105,11 @@ document.getElementById('userMessage').addEventListener('keypress', function (e)
     }
 });
 
-const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:3000/chat' : 'https://talentquery.io/chat';
+const apiUrl = window.location.hostname === 'localhost' ?
+    'http://localhost:3000/chat' :
+    (window.location.hostname === 'www.talentquery.io' ?
+        'https://www.talentquery.io/chat' :
+        'https://talentquery.io/chat');
 
 async function sendMessage() {
     const userMessage = document.getElementById('userMessage').value;
@@ -132,7 +136,7 @@ async function sendMessage() {
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
-              }
+            }
 
             const data = await response.json();
             console.log('Received response:', data);
