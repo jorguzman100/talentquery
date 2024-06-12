@@ -1,5 +1,3 @@
-// server.mjs
-
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';  // Import Helmet for security headers
@@ -26,14 +24,24 @@ app.use(cors({
   allowedHeaders: ['Content-Type']
 }));
 app.use(express.json());
-app.use(helmet());  // Use Helmet for setting security headers
 
+// Helmet configuration to allow necessary scripts
+app.use(helmet({
+  contentSecurityPolicy: {
+    useDefaults: true,
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://www.googletagmanager.com", "https://cdnjs.cloudflare.com", "https://cdn.jsdelivr.net"],
+      connectSrc: ["'self'", "https://talentquery.io"],
+      imgSrc: ["'self'", "data:", "https://www.google-analytics.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
+      fontSrc: ["'self'", "https://fonts.googleapis.com", "https://fonts.gstatic.com"],
+    }
+  }
+}));
 
-// Serve static files from the 'public' directory
+// Serve static files from the 'public_html' directory
 app.use(express.static(path.join(__dirname, 'public_html')));
-
-// Serve static files from the 'node_modules' directory
-app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 app.post('/chat', async (req, res) => {
   const { message } = req.body;
