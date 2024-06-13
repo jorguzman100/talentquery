@@ -1,0 +1,13 @@
+[Unit]
+Description=TalentQuery Node.js Application
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/environment
+Type=simple
+User=root
+ExecStart=/usr/bin/node /var/www/talentquery/server.mjs
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
