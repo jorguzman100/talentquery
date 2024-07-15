@@ -11954,8 +11954,13 @@ body {
   }
 }
 section {
-  padding: 60px 0;
+  padding: 60px;
   border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
 }
 
 section h2, section .h2 {
@@ -11977,14 +11982,7 @@ section p {
   line-height: 1.5;
 }
 
-.issues-section {
-  display: flex;
-  align-items: center;
-  padding: 60px 0;
-}
-
 .bg-left {
-  background-color: #8585f1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11992,9 +11990,9 @@ section p {
 }
 
 .issues-img {
-  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   margin: 30px;
-  z-index: 1;
 }
 
 .text-container {
@@ -12003,11 +12001,13 @@ section p {
 
 .issues-intro-text1 {
   color: #8585f1;
+  font-size: 1.2rem;
 }
 
 .issues-intro-text2 {
   color: #ffffff;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .chart-heading {
@@ -12072,6 +12072,47 @@ section p {
   }
   .quote {
     text-align: start;
+    margin-left: 30px;
+  }
+}
+.shines-section {
+  display: flex;
+  align-items: center;
+}
+
+.bg-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.shines-img {
+  min-width: 200px;
+  max-width: 200px;
+  margin: 30px;
+}
+
+.text-container {
+  padding: 40px;
+}
+
+.shines-intro-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #D1FF0A;
+}
+
+@media (max-width: 768px) {
+  .shines-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .shines-section .shines-img {
+    padding: 2rem;
   }
 }
 .services {

@@ -23,6 +23,9 @@ $chartColor2: #6931c7;
 $chartColor3: #9393ed;
 $chartColor4: #4a4ce1;
 
+$highlightColor: #b9e026;
+
+
 
 // Override navbar active link color
 $navbar-active-color: white;
@@ -178,8 +181,11 @@ $navbar-brand-hover-color: $white;
 // **********  Sections  **********
 
 section {
-    padding: 60px 0;
+    padding: 60px;
     border-bottom: 1px solid #eee;
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
 }
 
 section h2 {
@@ -203,17 +209,11 @@ section p {
 
 
 
+
+
 // **********  Issues  **********
 
-.issues-section {
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
-}
-
-
 .bg-left {
-    background-color: $lightPurple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,9 +221,9 @@ section p {
 }
 
 .issues-img {
-    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
     margin: 30px;
-    z-index: 1;
 }
 
 .text-container {
@@ -232,13 +232,14 @@ section p {
 
 .issues-intro-text1 {
     color: $lightPurple;
+    font-size: 1.2rem;
 }
 
 .issues-intro-text2 {
     color: $white;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
 }
-
 
 .chart-heading {
     color: $white;
@@ -264,7 +265,6 @@ section p {
 .chart-heading .color4 {
     color: $chartColor4;
 }
-
 
 .canvas-container {
     .row {
@@ -310,8 +310,60 @@ section p {
 
     .quote {
         text-align: start;
+        margin-left: 30px;
     }
 }
+
+
+
+
+
+
+// **********  Shines  **********
+
+.shines-section {
+    display: flex;
+    align-items: center;
+}
+
+.bg-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.shines-img {
+    min-width: 200px;
+    max-width: 200px;
+    margin: 30px;
+}
+
+.text-container {
+    padding: 40px;
+}
+
+.shines-intro-text {
+    color: $white;
+    font-size: 1.2rem;
+}
+
+.highlight {
+    color: $primary;
+}
+
+@media (max-width: 768px) {
+    .shines-section {
+        flex-direction: column;
+        height: auto;
+
+        .shines-img {
+            padding: 2rem;
+        }
+    }
+}
+
+
 
 
 
