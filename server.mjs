@@ -50,8 +50,8 @@ app.post('/chat', async (req, res) => {
   try {
     // Step 1: Create an Assistant
     const assistant = await openai.beta.assistants.create({
-      name: "TalentQuery IT Startups Recruitment Agency Assistant",
-      instructions: "You are an assistant that helps with IT recruitment queries.",
+      name: "TalentQuery",
+      instructions: "You are an assistant that helps clients and candidates with TalentQuery IT recruitment agency queries.",
       tools: [{ type: "code_interpreter" }],
       model: "gpt-4o"
     });

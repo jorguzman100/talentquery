@@ -17,6 +17,8 @@ $gray: #78909c; // Light gray for backgrounds
 $extra2: #444444; // Dark gray for icons
 
 
+
+
 // Color sets
 .colorSet1 {
     background-color: $primary;
@@ -211,6 +213,22 @@ $navbar-brand-hover-color: $white;
 .jumbotron p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+}
+
+
+.dotted-rectangle {
+    margin: 10rem 0 0 2rem;
+    width: 90%;
+    /* Adjust the width as needed */
+    height: 150px;
+    /* Adjust the height as needed */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 3px, transparent 5px);
+    background-size: 30px 30px;
+
+    @media (max-width: 768px) {
+        margin: 5rem 0 0 2rem;
+        width: 100%;
+    }
 }
 
 
@@ -619,13 +637,16 @@ $navbar-brand-hover-color: $white;
     position: relative;
     overflow: hidden;
     color: white;
-    height: 80vh; /* Adjusted height for wide screens */
+    height: 80vh;
+    /* Adjusted height for wide screens */
     display: flex;
     align-items: center;
 
     @media (max-width: 768px) {
-        height: auto; /* Allow height to adjust for narrow screens */
-        padding: 60px 0; /* Add padding to create space for the content */
+        height: auto;
+        /* Allow height to adjust for narrow screens */
+        padding: 60px 0;
+        /* Add padding to create space for the content */
     }
 
     .parallax-bg {
@@ -645,17 +666,20 @@ $navbar-brand-hover-color: $white;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Darker tone overlay */
+        background: rgba(0, 0, 0, 0.5);
+        /* Darker tone overlay */
         z-index: -1;
     }
 
     .container {
         position: relative;
         z-index: 2;
-        padding: 20px; /* Add padding inside the columns */
+        padding: 20px;
+        /* Add padding inside the columns */
 
         @media (max-width: 768px) {
-            padding: 40px; /* Increase padding for narrow screens */
+            padding: 40px;
+            /* Increase padding for narrow screens */
         }
     }
 
@@ -667,7 +691,8 @@ $navbar-brand-hover-color: $white;
         position: absolute;
         bottom: 10px;
         right: 10px;
-        background: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+        background: rgba(0, 0, 0, 0.0);
+        /* Semi-transparent background */
         padding: 5px 10px;
         border-radius: 5px;
     }
@@ -679,7 +704,8 @@ $navbar-brand-hover-color: $white;
     }
 
     .attribution a:hover {
-        color: #D1FF0A; /* Change to your primary color on hover */
+        color: #D1FF0A;
+        /* Change to your primary color on hover */
     }
 }
 
@@ -966,15 +992,18 @@ $navbar-brand-hover-color: $white;
 // **********  Chatbot ChatGPT OpenAI Assistant  **********
 
 
-$gray: #eeeeee; /* Updated gray tone */
-$extra2: #444444; /* Dark gray for icons */
+$gray: #eeeeee;
+/* Updated gray tone */
+$extra2: #444444;
+/* Dark gray for icons */
 
 
 .chatbot-button {
     position: fixed;
     bottom: 90px;
     right: 20px;
-    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+    /* Adjusted gradient */
     color: #32323c;
     border-radius: 50%;
     width: 60px;
@@ -1014,7 +1043,8 @@ $extra2: #444444; /* Dark gray for icons */
 }
 
 .chatbot-header {
-    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+    /* Adjusted gradient */
     color: #32323c;
     padding: 15px;
     display: flex;
@@ -1041,10 +1071,11 @@ $extra2: #444444; /* Dark gray for icons */
     position: relative;
     display: flex;
     justify-content: baseline;
-    align-items:start;
+    align-items: start;
     flex-direction: column;
     animation: fadeInOut 8s ease-in-out;
-    opacity: 0; /* Start as invisible */
+    opacity: 0;
+    /* Start as invisible */
 
     p {
         margin-bottom: 0;
@@ -1056,12 +1087,15 @@ $extra2: #444444; /* Dark gray for icons */
     0% {
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -1070,7 +1104,8 @@ $extra2: #444444; /* Dark gray for icons */
 
 .chatbot-status .status-icon {
     font-size: 24px;
-    color: #8cfa69; /* Green indicator */
+    color: #8cfa69;
+    /* Green indicator */
     margin-bottom: 5px;
 }
 
@@ -1099,20 +1134,23 @@ $extra2: #444444; /* Dark gray for icons */
     width: calc(100% - 60px);
     box-sizing: border-box;
     display: inline-block;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
+    /* Rounded corners */
     margin: 10px;
 }
 
 .chat-send-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+    /* Adjusted gradient */
     color: #32323c;
     border: none;
     cursor: pointer;
     display: inline-block;
     width: 60px;
     text-align: center;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
+    /* Rounded corners */
     margin: 10px;
 }
 
@@ -1149,12 +1187,14 @@ $extra2: #444444; /* Dark gray for icons */
 }
 
 .chat-message.user .message-bubble {
-    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Gradient background */
+    background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+    /* Gradient background */
     color: #32323c;
 }
 
 .chat-message.assistant .message-bubble {
-    background-color: rgb(240, 242, 247); /* Light gray */
+    background-color: rgb(240, 242, 247);
+    /* Light gray */
     color: #32323c;
 }
 
@@ -1171,7 +1211,8 @@ $extra2: #444444; /* Dark gray for icons */
 }
 
 .chatbot-header .profile-picture::before {
-    content: '\f086'; /* FontAwesome icon code for comments */
+    content: '\f086';
+    /* FontAwesome icon code for comments */
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     font-size: 24px;

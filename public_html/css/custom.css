@@ -11998,6 +11998,22 @@ h3,
   margin-bottom: 30px;
 }
 
+.dotted-rectangle {
+  margin: 10rem 0 0 2rem;
+  width: 90%;
+  /* Adjust the width as needed */
+  height: 150px;
+  /* Adjust the height as needed */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 3px, transparent 5px);
+  background-size: 30px 30px;
+}
+@media (max-width: 768px) {
+  .dotted-rectangle {
+    margin: 5rem 0 0 2rem;
+    width: 100%;
+  }
+}
+
 .btn-primary {
   background-color: #D1FF0A;
   /* Use primary color */
@@ -12317,14 +12333,17 @@ h3,
   position: relative;
   overflow: hidden;
   color: white;
-  height: 80vh; /* Adjusted height for wide screens */
+  height: 80vh;
+  /* Adjusted height for wide screens */
   display: flex;
   align-items: center;
 }
 @media (max-width: 768px) {
   .parallax-section {
-    height: auto; /* Allow height to adjust for narrow screens */
-    padding: 60px 0; /* Add padding to create space for the content */
+    height: auto;
+    /* Allow height to adjust for narrow screens */
+    padding: 60px 0;
+    /* Add padding to create space for the content */
   }
 }
 .parallax-section .parallax-bg {
@@ -12343,17 +12362,20 @@ h3,
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Darker tone overlay */
+  background: rgba(0, 0, 0, 0.5);
+  /* Darker tone overlay */
   z-index: -1;
 }
 .parallax-section .container {
   position: relative;
   z-index: 2;
-  padding: 20px; /* Add padding inside the columns */
+  padding: 20px;
+  /* Add padding inside the columns */
 }
 @media (max-width: 768px) {
   .parallax-section .container {
-    padding: 40px; /* Increase padding for narrow screens */
+    padding: 40px;
+    /* Increase padding for narrow screens */
   }
 }
 .parallax-section h2, .parallax-section .h2 {
@@ -12363,7 +12385,8 @@ h3,
   position: absolute;
   bottom: 10px;
   right: 10px;
-  background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0);
+  /* Semi-transparent background */
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -12373,7 +12396,8 @@ h3,
   font-size: x-small;
 }
 .parallax-section .attribution a:hover {
-  color: #D1FF0A; /* Change to your primary color on hover */
+  color: #D1FF0A;
+  /* Change to your primary color on hover */
 }
 
 .about-content {
@@ -12594,7 +12618,8 @@ h3,
   position: fixed;
   bottom: 90px;
   right: 20px;
-  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+  /* Adjusted gradient */
   color: #32323c;
   border-radius: 50%;
   width: 60px;
@@ -12634,7 +12659,8 @@ h3,
 }
 
 .chatbot-header {
-  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+  /* Adjusted gradient */
   color: #32323c;
   padding: 15px;
   display: flex;
@@ -12664,7 +12690,8 @@ h3,
   align-items: start;
   flex-direction: column;
   animation: fadeInOut 8s ease-in-out;
-  opacity: 0; /* Start as invisible */
+  opacity: 0;
+  /* Start as invisible */
 }
 .chatbot-status p {
   margin-bottom: 0;
@@ -12686,7 +12713,8 @@ h3,
 }
 .chatbot-status .status-icon {
   font-size: 24px;
-  color: #8cfa69; /* Green indicator */
+  color: #8cfa69;
+  /* Green indicator */
   margin-bottom: 5px;
 }
 
@@ -12715,20 +12743,23 @@ h3,
   width: calc(100% - 60px);
   box-sizing: border-box;
   display: inline-block;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px;
+  /* Rounded corners */
   margin: 10px;
 }
 
 .chat-send-button {
   padding: 10px 20px;
-  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Adjusted gradient */
+  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+  /* Adjusted gradient */
   color: #32323c;
   border: none;
   cursor: pointer;
   display: inline-block;
   width: 60px;
   text-align: center;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px;
+  /* Rounded corners */
   margin: 10px;
 }
 
@@ -12765,12 +12796,14 @@ h3,
 }
 
 .chat-message.user .message-bubble {
-  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%); /* Gradient background */
+  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+  /* Gradient background */
   color: #32323c;
 }
 
 .chat-message.assistant .message-bubble {
-  background-color: rgb(240, 242, 247); /* Light gray */
+  background-color: rgb(240, 242, 247);
+  /* Light gray */
   color: #32323c;
 }
 
@@ -12787,7 +12820,8 @@ h3,
 }
 
 .chatbot-header .profile-picture::before {
-  content: "\f086"; /* FontAwesome icon code for comments */
+  content: "\f086";
+  /* FontAwesome icon code for comments */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 24px;
