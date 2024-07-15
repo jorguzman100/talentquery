@@ -1,47 +1,5 @@
 @charset "UTF-8";
 /* ***** RUN npm run build-css AFTER EVERY CHANGE IN THIS FILE ***** */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-.colorSet1 {
-  background-color: #D1FF0A;
-  color: #32323c;
-}
-
-.colorSet2 {
-  background-color: #D1FF0A;
-  color: #78909c;
-}
-
-.colorSet3 {
-  background-color: #32323c;
-  color: #D1FF0A;
-}
-
-.colorSet4 {
-  background-color: #32323c;
-  color: #78909c;
-}
-
-.colorSet5 {
-  background-color: #dee3e6;
-  color: #32323c;
-}
-
-.colorSet6 {
-  background-color: #dee3e6;
-  color: #78909c;
-}
-
-.colorSet7 {
-  background-color: #78909c;
-  color: #32323c;
-}
-
-.colorSet8 {
-  background-color: #78909c;
-  color: #D1FF0A;
-}
-
-/* Import Google Fonts */
 /* Adjust the base font size here */
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
@@ -115,7 +73,7 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: "Montserrat", Arial, sans-serif;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -11893,77 +11851,17 @@ html {
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  /* Light background for a minimal look */
-}
-
-h2, .h2,
-h3,
-.h3 {
-  font-weight: 700;
-  color: #32323c;
-}
-
-.icon-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  font-size: 3rem;
-  /* Ensure the icons are large */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow */
-}
-
-.colorSet1 {
-  background-color: #D1FF0A;
-  color: #32323c;
-}
-
-.colorSet2 {
-  background-color: #D1FF0A;
-  color: #78909c;
-}
-
-.colorSet3 {
   background-color: #32323c;
-  color: #D1FF0A;
-}
-
-.colorSet4 {
-  background-color: #32323c;
-  color: #78909c;
-}
-
-.colorSet5 {
-  background-color: #dee3e6;
-  color: #32323c;
-}
-
-.colorSet6 {
-  background-color: #dee3e6;
-  color: #78909c;
-}
-
-.colorSet7 {
-  background-color: #78909c;
-  color: #32323c;
-}
-
-.colorSet8 {
-  background-color: #78909c;
-  color: #D1FF0A;
+  color: #ffffff;
+  font-size: 1rem;
 }
 
 .nav-link {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .nav-link.active,
@@ -11972,7 +11870,7 @@ h3,
 }
 
 .navbar-brand {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -11989,12 +11887,12 @@ h3,
 }
 
 .jumbotron h1, .jumbotron .h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .jumbotron p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
@@ -12022,7 +11920,6 @@ h3,
   /* Text color */
   font-size: 1.2rem;
   padding: 15px 30px;
-  text-transform: uppercase;
   border-radius: 50px;
   /* Rounded button */
   box-shadow: 0 5px 10px rgba(209, 255, 10, 0.2);
@@ -12045,14 +11942,6 @@ h3,
   color: #dee3e6;
 }
 
-.animatedImg {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  animation: pulse 2s infinite;
-  /* Example animation */
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -12064,50 +11953,127 @@ h3,
     transform: scale(1);
   }
 }
-.section {
+section {
   padding: 60px 0;
-  background-color: #fff;
-  /* White background for minimalistic look */
   border-bottom: 1px solid #eee;
-  /* Subtle border to separate sections */
 }
 
-.section h2, .section .h2 {
+section h2, section .h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #32323c;
-}
-
-.section h3, .section .h3 {
   font-size: 1.5rem;
+}
+
+section h3, section .h3 {
+  font-size: 1.4rem;
   margin-bottom: 20px;
-  color: #32323c;
 }
 
-.section p {
-  color: #32323c;
-  line-height: 1.7;
-}
-
-.section .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.section .col-md-4 {
-  flex: 0 0 30%;
-  max-width: 30%;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.section .col-md-4 p {
+section h4, section .h4 {
   font-size: 1rem;
-  color: #32323c;
 }
 
+section p {
+  line-height: 1.5;
+}
+
+.issues-section {
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.bg-left {
+  background-color: #8585f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.issues-img {
+  width: 200px;
+  margin: 30px;
+  z-index: 1;
+}
+
+.text-container {
+  padding: 40px;
+}
+
+.issues-intro-text1 {
+  color: #8585f1;
+}
+
+.issues-intro-text2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.chart-heading {
+  color: #ffffff;
+  padding-right: 20px;
+  padding-left: 30px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.chart-heading .color1 {
+  color: #a581e0;
+}
+
+.chart-heading .color2 {
+  color: #6931c7;
+}
+
+.chart-heading .color3 {
+  color: #9393ed;
+}
+
+.chart-heading .color4 {
+  color: #4a4ce1;
+}
+
+.canvas-container .row {
+  display: flex;
+  align-items: center;
+}
+.canvas-container .row .col-md-6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.canvas-container .row canvas {
+  width: 150px !important;
+  height: 150px !important;
+  flex-shrink: 0;
+  margin-bottom: 4rem;
+}
+
+.quote {
+  font-size: 0.8rem;
+  color: #78909c;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .canvas-container .row {
+    flex-direction: column;
+    text-align: start;
+  }
+  .canvas-container .row .chart-heading {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .canvas-container .row canvas {
+    margin-bottom: 20px;
+  }
+  .quote {
+    text-align: start;
+  }
+}
 .services {
   background-color: #fff;
   padding: 60px 0;

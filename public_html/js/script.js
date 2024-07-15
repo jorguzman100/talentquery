@@ -9,6 +9,107 @@ gtag('config', 'G-E5DPBJ3KSE');
 
 
 
+// ********** Charts **********
+document.addEventListener('DOMContentLoaded', function () {
+    var ctx1 = document.getElementById('talentShortageChart').getContext('2d');
+    var talentShortageChart = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Talent Shortage', 'Other'],
+            datasets: [{
+                data: [26, 74],
+                backgroundColor: ['rgba(165, 129, 224, 0.5)', 'rgba(165, 129, 224, 0.1)'], // $chartColor1
+                borderColor: ['rgba(165, 129, 224, 1)', 'rgba(165, 129, 224, 0.2)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '69%', // Make the chart thinner
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
+
+    var ctx2 = document.getElementById('skillsGapChart').getContext('2d');
+    var skillsGapChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Struggle to Hire', 'Other'],
+            datasets: [{
+                data: [42, 58],
+                backgroundColor: ['rgba(105, 49, 199, 0.5)', 'rgba(105, 49, 199, 0.1)'], // $chartColor2
+                borderColor: ['rgba(105, 49, 199, 1)', 'rgba(105, 49, 199, 0.2)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '69%', // Make the chart thinner
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
+
+    var ctx3 = document.getElementById('burnoutChart').getContext('2d');
+    var burnoutChart = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            labels: ['Burnout', 'Other'],
+            datasets: [{
+                data: [48, 52],
+                backgroundColor: ['rgba(147, 147, 237, 0.5)', 'rgba(147, 147, 237, 0.1)'], // $chartColor4
+                borderColor: ['rgba(147, 147, 237, 1)', 'rgba(147, 147, 237, 0.2)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '69%', // Make the chart thinner
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
+
+    var ctx4 = document.getElementById('retentionChart').getContext('2d');
+    var retentionChart = new Chart(ctx4, {
+        type: 'doughnut',
+        data: {
+            labels: ['Likely to Look for Another Job', 'Other'],
+            datasets: [{
+                data: [53, 47],
+                backgroundColor: ['rgba(74, 76, 225, 0.5)', 'rgba(74, 76, 225, 0.1)'], // $chartColor5
+                borderColor: ['rgba(74, 76, 225, 1)', 'rgba(74, 76, 225, 0.2)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '69%', // Make the chart thinner
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            }
+        }
+    });
+
+});
+
+
+
+
+
+
 // ********** FAQs **********
 
 let isAnimating = false;

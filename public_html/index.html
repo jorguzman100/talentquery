@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +14,7 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5DPBJ3KSE"></script>
-    
+
 </head>
 
 <body>
@@ -52,10 +53,9 @@
                         <h1 class="display-4 text-primary">Find Your Next Talent</h1>
                         <p class="lead">Connecting IT startups in Latin America with the right professionals.</p>
                         <p class="notLead">Let's build your team together!</p>
-                        <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+                        <a href="#contact" class="btn btn-primary btn-lg">Get started</a>
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <!-- <img id="animatedImg" src="/img/jumbo/jumbo.svg" alt="Animate Hiring SVG" class="animatedImg"> -->
                         <div class="dotted-rectangle"></div>
                     </div>
                 </div>
@@ -69,6 +69,68 @@
 
 
     <main>
+
+        <!-- Issues Section -->
+        <section class="issues-section">
+            <div class="row w-100 m-0">
+                <div class="col-md-3 text-center bg-left p-0">
+                    <img src="./img/icons/1-issuesC.png" alt="Recruitment issues image" class="img-fluid issues-img">
+                </div>
+                <div class="col-md-9 text-container">
+                    <p class="issues-intro-text1">In the digital age, your company's growth is directly tied to the
+                        caliber of your tech team ...</p>
+                    <p class="issues-intro-text2">but finding and hiring these key players has become increasingly
+                        complex.</p>
+
+                        
+                        <div class="container canvas-container">
+                            <div class="row mb-4">
+                                <div class="col-xl-6 d-flex align-items-center mb-4 mb-xl-0">
+                                    <h4 class="chart-heading"><span class="color1">26% of CEOs</span> ranked Talent Shortage as their 2024 top concern (1)</h4>
+                                    <canvas id="talentShortageChart" width="150" height="150"></canvas>
+                                </div>
+                                <div class="col-xl-6 d-flex align-items-center">
+                                    <h4 class="chart-heading"><span class="color2">42% of IT decision-makers</span> indicate they struggle to hire candidates with the skills they need (2)</h4>
+                                    <canvas id="skillsGapChart" width="150" height="150"></canvas>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-xl-6 d-flex align-items-center mb-4 mb-xl-0">
+                                    <h4 class="chart-heading"><span class="color3">48% of tech workers</span> say their feelings of burnout are increasing (3)</h4>
+                                    <canvas id="burnoutChart" width="150" height="150"></canvas>
+                                </div>
+                                <div class="col-xl-6 d-flex align-items-center">
+                                    <h4 class="chart-heading"><span class="color4">53% of IT professionals</span> are likely to look for another job within the next 12 months (2)</h4>
+                                    <canvas id="retentionChart" width="150" height="150"></canvas>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="quote">(1) Gartner Top Trends Impacting IT Talent Strategy 2024</p>
+                                    <p class="quote">(2) Skillsoft IT Skills & Salary Report 2023 2024</p>
+                                    <p class="quote">(3) Robert Half Tech Hiring Report 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Services Section -->
         <section id="services" class="py-5">
@@ -503,33 +565,17 @@
     </footer>
 
 
-    <!-- OpenAI Assistant Bot -->
-    <!-- <section id="chatbot" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Chat with Us</h2>
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        <div id="chatBox" class="mb-4"></div>
-                        <input type="text" id="userMessage" class="form-control" placeholder="Type your message here">
-                        <button id="sendMessageButton" class="btn btn-primary mt-3">Send</button>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
     <!-- Include Popper.js and Bootstrap JS -->
-    <!-- <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Emojis -->
     <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.3.0/dist/emoji-picker.min.js"></script>
-    <script src="js/script.js"></script>
 
-    <!-- OpenAI Assistant Bot -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/chatbot.js"></script> -->
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/script.js"></script>
 
 
 </body>
