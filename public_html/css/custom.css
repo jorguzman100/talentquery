@@ -12115,6 +12115,114 @@ section p {
     padding: 2rem;
   }
 }
+.process-section {
+  padding: 60px 0;
+  background-color: #32323c;
+}
+.process-section .process-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.process-section .process-title .highlight {
+  color: #D1FF0A;
+}
+.process-section .process-description {
+  text-align: left;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+.process-section .process-steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.process-section .process-steps .step {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 30px;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .process-section .process-steps .step {
+    padding: 0 20%;
+  }
+}
+.process-section .process-steps .step .step-number {
+  color: #32323c;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+}
+@media (max-width: 992px) {
+  .process-section .process-steps .step .step-number {
+    left: 20%;
+  }
+}
+.process-section .process-steps .step:nth-child(1) .step-title {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.process-section .process-steps .step:nth-child(2) .step-title {
+  background-color: rgba(0, 177, 240, 0.75);
+}
+.process-section .process-steps .step:nth-child(3) .step-title {
+  background-color: rgba(116, 251, 121, 0.7);
+}
+.process-section .process-steps .step:nth-child(4) .step-title {
+  background-color: rgba(209, 255, 10, 0.7);
+}
+.process-section .process-steps .step .step-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+}
+.process-section .process-steps .step .step-img {
+  margin-bottom: 40px;
+  width: 80px;
+  height: 80px;
+}
+.process-section .process-steps .step .step-description {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+}
+.process-section .process-steps .step:nth-child(1) .step-description .highlight {
+  color: rgba(255, 255, 255, 0.25);
+}
+.process-section .process-steps .step:nth-child(2) .step-description .highlight {
+  color: rgba(0, 177, 240, 0.75);
+}
+.process-section .process-steps .step:nth-child(3) .step-description .highlight {
+  color: rgba(116, 251, 121, 0.7);
+}
+.process-section .process-steps .step:nth-child(4) .step-description .highlight {
+  color: rgba(209, 255, 10, 0.7);
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .services {
   background-color: #fff;
   padding: 60px 0;

@@ -18,12 +18,10 @@ $extra2: #444444; // Dark gray for icons
 
 
 $lightPurple: #8585f1;
-$chartColor1: #a581e0; 
-$chartColor2: #6931c7; 
+$chartColor1: #a581e0;
+$chartColor2: #6931c7;
 $chartColor3: #9393ed;
 $chartColor4: #4a4ce1;
-
-$highlightColor: #b9e026;
 
 
 
@@ -183,6 +181,7 @@ $navbar-brand-hover-color: $white;
 section {
     padding: 60px;
     border-bottom: 1px solid #eee;
+
     @media (max-width: 768px) {
         padding: 60px 0;
     }
@@ -362,6 +361,150 @@ section p {
         }
     }
 }
+
+
+
+
+
+
+// **********  Process  **********
+
+$processColor1: rgba(255, 255, 255, .25); // color for step 1
+$processColor2: rgba(0, 177, 240, .75); // color for step 1
+$processColor3: rgba(116, 251, 121, .70); // color for step 1
+$processColor4: rgba(209, 255, 10, .70); // color for step 1
+
+.process-section {
+    padding: 60px 0;
+    background-color: $dark;
+
+    .process-title {
+        text-align: center;
+        color: $white;
+        font-size: 2rem;
+
+        .highlight {
+            color: $primary;
+        }
+    }
+
+    .process-description {
+        text-align: left;
+        color: $white;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .process-steps {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .step {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 30px;
+            position: relative; // Add position relative to parent
+
+            @media (max-width: 992px) {
+                padding: 0 20%;
+            }
+
+            .step-number {
+                color: $dark;
+                background-color: $white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 10px auto;
+                font-size: 1.2rem;
+                position: absolute; // Add position absolute to align within title
+                left: 20px; // Adjust to fit the title alignment
+                z-index: 2; // Ensure the number is above the title
+
+                @media (max-width: 992px) {
+                    left: 20%;
+                }
+            }
+
+            &:nth-child(1) .step-title {
+                background-color: $processColor1;
+            }
+
+            &:nth-child(2) .step-title {
+                background-color: $processColor2;
+            }
+
+            &:nth-child(3) .step-title {
+                background-color: $processColor3;
+            }
+
+            &:nth-child(4) .step-title {
+                background-color: $processColor4;
+            }
+
+            .step-title {
+                color: $white;
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+                border-radius: 20px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 30px; // Add padding to accommodate the number
+                position: relative; // Add position relative for proper z-index stacking
+                z-index: 1; // Ensure the title is below the number
+            }
+
+            .step-img {
+                margin-bottom: 40px;
+                width: 80px;
+                height: 80px;
+            }
+
+            .step-description {
+                color: $white;
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            &:nth-child(1) .step-description .highlight {
+                color: $processColor1;
+            }
+
+            &:nth-child(2) .step-description .highlight {
+                color: $processColor2;
+            }
+
+            &:nth-child(3) .step-description .highlight {
+                color: $processColor3;
+            }
+
+            &:nth-child(4) .step-description .highlight {
+                color: $processColor4;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
