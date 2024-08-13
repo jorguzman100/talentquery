@@ -16,14 +16,11 @@ $white: #ffffff;
 $gray: #78909c; // Light gray for backgrounds
 $extra2: #444444; // Dark gray for icons
 
-
 $lightPurple: #8585f1;
 $chartColor1: #a581e0;
 $chartColor2: #6931c7;
 $chartColor3: #9393ed;
 $chartColor4: #4a4ce1;
-
-
 
 // Override navbar active link color
 $navbar-active-color: white;
@@ -31,14 +28,18 @@ $navbar-nav-link-active-color: white;
 $navbaremphasis-color-rgb: white;
 $emphasis-color-rgb: $white;
 
-
 /* Adjust the base font size here */
 $body-line-height: 1.5;
 $spacer: 1rem;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
+// General Container Style
+.container {
+    max-width: 1200px; // Limit the width to a reasonable size
+    margin: 0 auto; // Center the container
+    padding: 0 15px; // Add some padding for the sides
+}
 
 // **********  Global **********
 
@@ -46,7 +47,6 @@ $spacer: 1rem;
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -56,9 +56,6 @@ body {
     color: $white;
     font-size: 1rem;
 }
-
-
-
 
 // **********  Navbar  **********
 $navbar-color: rgba($white, 0.65);
@@ -88,8 +85,6 @@ $navbar-brand-hover-color: $white;
     font-weight: 100;
 }
 
-
-
 // **********  Jumbo  **********
 
 .jumbotron {
@@ -97,6 +92,9 @@ $navbar-brand-hover-color: $white;
     color: white;
     padding: 100px 0;
     position: relative;
+    .container {
+        max-width: 1200px;
+    }
 }
 
 .jumbotron h1 {
@@ -109,13 +107,10 @@ $navbar-brand-hover-color: $white;
     margin-bottom: 30px;
 }
 
-
 .dotted-rectangle {
     margin: 10rem 0 0 2rem;
     width: 90%;
-    /* Adjust the width as needed */
     height: 150px;
-    /* Adjust the height as needed */
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.25) 3px, transparent 5px);
     background-size: 30px 30px;
 
@@ -125,37 +120,25 @@ $navbar-brand-hover-color: $white;
     }
 }
 
-
 .btn-primary {
     background-color: $primary;
-    /* Use primary color */
     border: none;
     color: $dark;
-    /* Text color */
     font-size: 1.2rem;
     padding: 15px 30px;
     border-radius: 50px;
-    /* Rounded button */
     box-shadow: 0 5px 10px rgba($primary, 0.2);
-    /* Initial shadow */
 
     &:hover {
         background-color: lighten($primary, 10%);
-        /* Lighter background on hover */
         box-shadow: 0 8px 15px rgba($primary, 0.4);
-        /* More pronounced shadow on hover */
     }
 
     &:active {
         background-color: darken($primary, 10%);
-        /* Darker background on click */
         box-shadow: 0 4px 8px rgba($primary, 0.1);
-        /* Less shadow on click */
     }
 }
-
-
-
 
 .notLead {
     color: $light;
@@ -174,7 +157,6 @@ $navbar-brand-hover-color: $white;
         transform: scale(1);
     }
 }
-
 
 // **********  Sections  **********
 
@@ -206,11 +188,55 @@ section p {
     line-height: 1.5;
 }
 
+// **********  Market Opportunities  **********
 
+.market-opportunities-section {
+    background-color: $secondary;
+    padding: 60px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .section-content {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .market-map {
+        max-width: 399px;
+        max-height: 399px;
+    }
+}
+
+@media (min-width: 992px) {
+    .market-opportunities-section .col-lg-6 {
+        text-align: left;
+
+        &:nth-child(2) {
+            text-align: right;
+        }
+    }
+}
 
 
 
 // **********  Issues  **********
+
+.issues-section {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
 
 .bg-left {
     display: flex;
@@ -313,16 +339,16 @@ section p {
     }
 }
 
-
-
-
-
-
 // **********  Shines  **********
 
 .shines-section {
     display: flex;
     align-items: center;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 .bg-right {
@@ -362,11 +388,6 @@ section p {
     }
 }
 
-
-
-
-
-
 // **********  Process  **********
 
 $processColor1: rgba(255, 255, 255, .25); // color for step 1
@@ -377,6 +398,11 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 .process-section {
     padding: 60px 0;
     background-color: $dark;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     .process-title {
         text-align: center;
@@ -499,469 +525,18 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// **********  Services  **********
-
-.services {
-    background-color: #fff;
-    padding: 60px 0;
-    border-bottom: 1px solid #eee;
-
-    h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #32323c;
-        margin-bottom: 40px;
-    }
-
-    .col-md-4 {
-        margin-bottom: 30px;
-        text-align: center;
-
-        i {
-            color: $primary;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #32323c;
-            margin-bottom: 15px;
-        }
-
-        p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-    }
-}
-
-
-
-
-
-// **********  Approach  **********
-
-
-#approach {
-    background: linear-gradient(to right, #32323c, #4b4b5a); // Adjust background as needed
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-
-    h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 40px;
-        color: $primary; // Use theme primary color
-    }
-
-    .timeline {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start; // Align items to the top
-        position: relative;
-        padding: 0 20px;
-        max-width: 900px;
-        margin: 0 auto;
-        flex-wrap: nowrap; // Ensure wrapping on smaller screens
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 22px; // Adjust to the center of the circles
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: $primary; // Line color
-            z-index: 1;
-            border-radius: 4px;
-        }
-
-        .timeline-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 2; // Ensure the circles are above the line
-            flex: 1;
-            min-width: 200px; // Ensure it doesn't get too small
-            margin-bottom: 20px; // Add some margin for better spacing on smaller screens
-
-            .timeline-point {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: $secondary; // Circle color
-                color: $primary; // Number color
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.5rem;
-                font-weight: bold;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-                margin-bottom: 15px;
-                border: 4px solid $primary; // Border color
-            }
-
-            .timeline-content {
-                background: rgba(0, 0, 0, 0.7);
-                padding: 20px;
-                border-radius: 10px;
-                text-align: center;
-                max-width: 250px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-                transition: transform 0.3s, box-shadow 0.3s;
-
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-                }
-
-                h3 {
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                    color: $primary; // Heading color
-                    margin-bottom: 10px;
-                }
-
-                p {
-                    font-size: 1rem;
-                    line-height: 1.5;
-                    color: #ccc;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        .timeline {
-            flex-direction: column; // Stack items vertically on smaller screens
-            align-items: center;
-
-            &::before {
-                top: 20px;
-                bottom: auto;
-                left: 10%;
-                right: 10%;
-                height: 2px; // Make the line thinner on smaller screens
-            }
-
-            .timeline-step {
-                margin-bottom: 40px; // Add more space between steps
-
-                &:last-child {
-                    margin-bottom: 0; // Remove margin from the last step
-                }
-
-                .timeline-point {
-                    margin-bottom: 10px;
-                }
-
-                .timeline-content {
-                    max-width: 100%; // Make sure the content fits well on smaller screens
-                    padding: 10px;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-// **********  Features  **********
-
-#features {
-
-    // Container for feature cards
-    .feature-card {
-        position: relative; // Allow absolute positioning of child elements
-        text-align: center; // Center align text inside the card
-        border-radius: 10px; // Rounded corners for the card
-        overflow: hidden; // Hide content that overflows the card boundaries
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Add a subtle shadow to the card
-        transition: transform 0.3s, height 0.3s; // Smooth transition for transform and height changes
-        background: rgba(255, 255, 255, 0.9); // Slightly transparent white background for the card
-        padding: 20px; // Padding inside the card
-        height: 400px; // Fixed height for the card to prevent collapsing
-        margin-bottom: 20px; // Space below each card
-
-        // Lift the card slightly on hover
-        &:hover {
-            transform: translateY(-10px);
-        }
-
-        // Image inside the card
-        .feature-image {
-            width: 100%; // Ensure the image width fits within the card
-            max-width: 75%; // Set a maximum width for the image
-            max-height: 75%;
-            transition: transform 0.3s, top 0.3s; // Smooth transition for transform and top changes
-            position: relative; // Relative positioning for top adjustment
-            top: 10px; // Slightly lower the image initially
-            margin-bottom: 20px; // Space below the image
-        }
-
-        // Adjust the image and show detailed text on card hover
-        &:hover .feature-image {
-            transform: scale(0.7); // Reduce the image size smoothly on hover
-            top: -50px; // Align the image to the top on hover
-        }
-
-        // Title inside the card
-        .feature-title {
-            margin-top: 15px; // Space above the title
-            font-size: 1.5rem; // Font size for the title
-            color: $dark; // Dark color for the title text
-            transition: margin-bottom 0.3s; // Smooth transition for margin-bottom changes
-            position: absolute; // Position title at the bottom
-            bottom: 0px; // Space from the bottom
-            left: 50%; // Center align horizontally
-            transform: translateX(-50%); // Center align using translation
-            width: calc(100% - 40px); // Adjust width to account for card padding
-        }
-
-        // Detailed text inside the card
-        .feature-details {
-            height: 135px;
-            position: absolute; // Absolute positioning within the card
-            bottom: 80px; // Position the detailed text at the bottom
-            left: 50%; // Center align the text horizontally
-            transform: translateX(-50%); // Center the text using translation
-            width: calc(100% - 40px); // Adjust width to account for card padding
-            padding: 20px; // Padding inside the detailed text box
-            background: rgba($primary, 0.7); // Dark background with transparency
-            color: $dark; // White color for the text
-            font-weight: bold;
-            opacity: 0; // Initially hidden
-            border-radius: 15px; // Rounded corners for the detailed text box
-            text-align: center; // Center align the text inside the detailed text box
-            transition: opacity 0.3s, transform 0.3s; // Smooth transition for opacity and transform changes
-
-            // Show the detailed text on card hover
-            &:hover {
-                opacity: 1; // Make the detailed text visible on hover
-            }
-        }
-
-        // Ensure the detailed text appears when hovering any part of the card
-        &:hover .feature-details {
-            opacity: 1; // Make the detailed text visible on hover
-        }
-    }
-
-    .row {
-        display: flex; // Use flexbox for layout
-        flex-wrap: wrap; // Wrap items to new lines if necessary
-        margin-top: 30px; // Space above the row
-
-        @media (max-width: 1200px) {
-            .col-lg-4 {
-                flex: 0 0 50%; // Make columns take up half the row width
-                max-width: 50%; // Set the maximum width for columns
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .col-lg-4,
-            .col-md-6 {
-                flex: 0 0 100%; // Make columns take up full row width on small screens
-                max-width: 100%; // Set the maximum width for columns on small screens
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-// **********  About us  **********
-
-// Parallax Section
-/* Parallax Section */
-.parallax-section {
-    position: relative;
-    overflow: hidden;
-    color: white;
-    height: 80vh;
-    /* Adjusted height for wide screens */
-    display: flex;
-    align-items: center;
-
-    @media (max-width: 768px) {
-        height: auto;
-        /* Allow height to adjust for narrow screens */
-        padding: 60px 0;
-        /* Add padding to create space for the content */
-    }
-
-    .parallax-bg {
-        background: url('/img/team/team.jpg') no-repeat center center fixed;
-        background-size: cover;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        /* Darker tone overlay */
-        z-index: -1;
-    }
-
-    .container {
-        position: relative;
-        z-index: 2;
-        padding: 20px;
-        /* Add padding inside the columns */
-
-        @media (max-width: 768px) {
-            padding: 40px;
-            /* Increase padding for narrow screens */
-        }
-    }
-
-    h2 {
-        color: $primary;
-    }
-
-    .attribution {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        background: rgba(0, 0, 0, 0.0);
-        /* Semi-transparent background */
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-
-    .attribution {
-        color: rgba($light, 0.7);
-        text-decoration: none;
-        font-size: x-small;
-    }
-
-    .attribution a:hover {
-        color: #D1FF0A;
-        /* Change to your primary color on hover */
-    }
-}
-
-
-// About Content
-.about-content {
-    background: rgba($secondary, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-
-    h3 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        color: $primary;
-    }
-
-    p {
-        font-size: 1.2rem;
-        line-height: 1.7;
-    }
-
-    @media (max-width: 768px) {
-        padding: 20px; // Adjust padding for narrow screens
-    }
-}
-
-// Team Content
-.team-content {
-    background: rgba($primary, 0.7);
-    padding: 40px;
-    border-radius: 10px;
-
-    .team-member {
-        text-align: center;
-        margin-bottom: 30px;
-
-        .animated-icon {
-            margin-bottom: 15px;
-            animation: pulse 2s infinite; // Example animation
-        }
-
-        h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-top: 15px;
-            color: $dark;
-        }
-
-        p {
-            font-size: 1.2rem; // Match font size with the about-content paragraph
-            color: #fff;
-        }
-    }
-
-    @media (max-width: 768px) {
-        padding: 20px; // Adjust padding for narrow screens
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-
-
-
 // **********  Contact Us  **********
-
 
 // Contact Us Styles
 #contact {
     background: #f8f9fa;
     color: $dark;
     padding: 60px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     h2 {
         font-size: 2.5rem;
@@ -1030,14 +605,13 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
     }
 }
 
-
-
-
-
-
 // **********  FAQs  **********
 
 #faqs {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     .faq-questions,
     .faq-answers {
@@ -1113,13 +687,7 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
     }
 }
 
-
-
-
-
-
 // **********  Scrollup Arrow Btn  **********
-
 
 .scroll-to-top {
     position: fixed;
@@ -1155,19 +723,12 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
     visibility: visible;
 }
 
-
-
-
-
-
 // **********  Chatbot ChatGPT OpenAI Assistant  **********
-
 
 $gray: #eeeeee;
 /* Updated gray tone */
 $extra2: #444444;
 /* Dark gray for icons */
-
 
 .chatbot-button {
     position: fixed;
@@ -1253,7 +814,6 @@ $extra2: #444444;
     }
 }
 
-
 @keyframes fadeInOut {
     0% {
         opacity: 0;
@@ -1271,7 +831,6 @@ $extra2: #444444;
         opacity: 0;
     }
 }
-
 
 .chatbot-status .status-icon {
     font-size: 24px;
@@ -1423,20 +982,17 @@ $extra2: #444444;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
-
-
-
-
 // **********  Footer  **********
 
 .footer {
     background-color: #32323c;
     color: white;
     padding: 40px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 .footer h3 {
@@ -1485,7 +1041,6 @@ $extra2: #444444;
 .footer .text-center {
     text-align: center;
 }
-
 
 // WhatsApp Btn
 

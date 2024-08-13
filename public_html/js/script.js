@@ -365,45 +365,7 @@ document.querySelectorAll('.jumbotron a.btn').forEach(button => {
     });
 });
 
-// Services section interaction tracking
-document.querySelectorAll('#services .icon-circle, #services h3, #services p').forEach(element => {
-    element.addEventListener('click', function () {
-        gtag('event', 'service_interaction', {
-            event_category: 'Services',
-            event_label: this.textContent.trim() || 'Service Element'
-        });
-    });
-});
 
-// Approach section interaction tracking
-document.querySelectorAll('#approach .timeline-step, #approach h3, #approach p').forEach(element => {
-    element.addEventListener('click', function () {
-        gtag('event', 'approach_interaction', {
-            event_category: 'Approach',
-            event_label: this.textContent.trim() || 'Approach Element'
-        });
-    });
-});
-
-// Features section interaction tracking
-document.querySelectorAll('#features .feature-card, #features h3, #features p').forEach(element => {
-    element.addEventListener('click', function () {
-        gtag('event', 'feature_interaction', {
-            event_category: 'Features',
-            event_label: this.textContent.trim() || 'Feature Element'
-        });
-    });
-});
-
-// About Us section interaction tracking
-document.querySelectorAll('#about-us .about-content, #about-us .team-content, #about-us h3, #about-us p').forEach(element => {
-    element.addEventListener('click', function () {
-        gtag('event', 'about_us_interaction', {
-            event_category: 'About Us',
-            event_label: this.textContent.trim() || 'About Us Element'
-        });
-    });
-});
 
 // Contact Us section interaction tracking
 document.querySelectorAll('#contact .contact-method, #contact h3, #contact p, #contact a').forEach(element => {

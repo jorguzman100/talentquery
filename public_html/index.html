@@ -4,32 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/img/logo/favicon.png" alt="TalentQuery logo icon" type="image/png">
     <title>TalentQuery</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5DPBJ3KSE"></script>
-
 </head>
 
 <body>
 
     <header>
         <nav id="navbar" class="navbar navbar-expand-lg bg-secondary p-4">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand text-white" href="#">
-                    <img src="./img/logo/logo.png" alt="TalentQuery company logo" width="75" height="50"
-                        class="d-inline-block align-text-mid mx-3">
+                    <img src="./img/logo/logo.png" alt="TalentQuery company logo" width="75" height="50" class="d-inline-block align-text-mid mx-3">
                     Talent<span>Query</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
@@ -61,378 +53,142 @@
                 </div>
             </div>
         </section>
-
-
-
     </header>
-
-
 
     <main>
 
-        <!-- Issues Section -->
-        <section class="issues-section">
-            <div class="row w-100 m-0">
-                <div class="col-md-3 text-center bg-left p-0">
-                    <img src="./img/icons/1-issuesC.png" alt="Recruitment issues image" class="img-fluid issues-img">
-                </div>
-                <div class="col-md-9 text-container">
-                    <p class="issues-intro-text1">In the digital age, your company's growth is directly tied to the
-                        caliber of your tech team ...</p>
-                    <p class="issues-intro-text2">but finding and hiring these key players has become increasingly
-                        complex.</p>
-                </div>
-            </div>
-            <div class="container canvas-container">
-                <div class="row mb-4">
-                    <div class="col-lg-6 d-flex align-items-center mb-4 mb-xl-0">
-                        <h4 class="chart-heading"><span class="color1">26% of CEOs</span> ranked Talent Shortage as
-                            their 2024 top concern (1)</h4>
-                        <canvas id="talentShortageChart" width="150" height="150"></canvas>
+        <!-- Market Opportunities Section -->
+        <section class="market-opportunities-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Expanding Tech Horizons</h2>
+                        <p class="section-content">
+                            Our expertise spans across vibrant tech hubs in Latin America, where growth in tech talent and thriving ecosystems create unparalleled opportunities.
+                        </p>
                     </div>
-                    <div class="col-lg-6 d-flex align-items-center">
-                        <h4 class="chart-heading"><span class="color2">42% of IT decision-makers</span> indicate they
-                            struggle to hire candidates with the skills they need (2)</h4>
-                        <canvas id="skillsGapChart" width="150" height="150"></canvas>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-6 d-flex align-items-center mb-4 mb-xl-0">
-                        <h4 class="chart-heading"><span class="color3">48% of tech workers</span> say their feelings of
-                            burnout are increasing (3)</h4>
-                        <canvas id="burnoutChart" width="150" height="150"></canvas>
-                    </div>
-                    <div class="col-lg-6 d-flex align-items-center">
-                        <h4 class="chart-heading"><span class="color4">53% of IT professionals</span> are likely to look
-                            for another job within the next 12 months (2)</h4>
-                        <canvas id="retentionChart" width="150" height="150"></canvas>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="quote">(1) Gartner Top Trends Impacting IT Talent Strategy 2024</p>
-                        <p class="quote">(2) Skillsoft IT Skills & Salary Report 2023 2024</p>
-                        <p class="quote">(3) Robert Half Tech Hiring Report 2024</p>
+                    <div class="col-lg-6 text-center">
+                        <img src="./img/market/map.png" alt="Map of Tech Cities in Latin America" class="market-map img-fluid">
                     </div>
                 </div>
             </div>
         </section>
+        
 
-
-
+        <!-- Issues Section -->
+        <section class="issues-section">
+            <div class="container">
+                <div class="row w-100 m-0">
+                    <div class="col-md-3 text-center bg-left p-0">
+                        <img src="./img/icons/1-issuesC.png" alt="Recruitment issues image" class="img-fluid issues-img">
+                    </div>
+                    <div class="col-md-9 text-container">
+                        <p class="issues-intro-text1">In the digital age, your company's growth is directly tied to the
+                            caliber of your tech team ...</p>
+                        <p class="issues-intro-text2">but finding and hiring these key players has become increasingly
+                            complex.</p>
+                    </div>
+                </div>
+                <div class="canvas-container">
+                    <div class="row mb-4">
+                        <div class="col-lg-6 d-flex align-items-center mb-4 mb-xl-0">
+                            <h4 class="chart-heading"><span class="color1">26% of CEOs</span> ranked Talent Shortage as
+                                their 2024 top concern (1)</h4>
+                            <canvas id="talentShortageChart" width="150" height="150"></canvas>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center">
+                            <h4 class="chart-heading"><span class="color2">42% of IT decision-makers</span> indicate they
+                                struggle to hire candidates with the skills they need (2)</h4>
+                            <canvas id="skillsGapChart" width="150" height="150"></canvas>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-lg-6 d-flex align-items-center mb-4 mb-xl-0">
+                            <h4 class="chart-heading"><span class="color3">48% of tech workers</span> say their feelings of
+                                burnout are increasing (3)</h4>
+                            <canvas id="burnoutChart" width="150" height="150"></canvas>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center">
+                            <h4 class="chart-heading"><span class="color4">53% of IT professionals</span> are likely to look
+                                for another job within the next 12 months (2)</h4>
+                            <canvas id="retentionChart" width="150" height="150"></canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="quote">(1) Gartner Top Trends Impacting IT Talent Strategy 2024</p>
+                            <p class="quote">(2) Skillsoft IT Skills & Salary Report 2023 2024</p>
+                            <p class="quote">(3) Robert Half Tech Hiring Report 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Shines Section -->
         <section class="shines-section">
-            <div class="row">
-                <div class="col-md-9 text-container">
-                    <p class="shines-intro-text">This is where <span class="highlight">TalentQuery</span> shines, we're
-                        not just recruiters, we're your strategic partners in assembling the tech dream team that <span
-                            class="highlight">will propel your business forward.</span></p>
-                </div>
-                <div class="col-md-3 text-center bg-right p-0">
-                    <img src="./img/icons/2-tq-shinesC.png" alt="TalentQuery shines image" class="img-fluid shines-img">
-                </div>
-            </div>
-        </section>
-
-
-
-       <!-- Process Section -->
-<section class="process-section">
-    <div class="container">
-        <h2 class="process-title">Our <span class="highlight">process</span></h2>
-        <p class="process-description"><span class="highlight">Our agency drives IT success through a strategic recruitment process: </span>
-            from custom planning and top-tier sourcing to precise selection and seamless onboarding.</p>
-        <div class="row process-steps">
-            <div class="col-lg-6 col-xl-3 step">
-                <div class="step-header">
-                    <div class="step-number">1</div>
-                    <div class="step-title">Strategy</div>
-                </div>
-                <img src="./img/icons/3-process-strategyC.png" alt="Strategy icon" class="img-fluid step-img">
-                <p class="step-description">Align recruitment processes to specific needs.</p>
-                <p class="step-description">Guide based on Latin America market insights.</p>
-            </div>
-            <div class="col-lg-6 col-xl-3 step">
-                <div class="step-header">
-                    <div class="step-number">2</div>
-                    <div class="step-title">Source & screening</div>
-                </div>
-                <img src="./img/icons/3-process-sourceC.png" alt="Source & screening icon" class="img-fluid step-img">
-                <p class="step-description">Use top technology to <span class="highlight">access to the full reachable market.</span></p>
-                <p class="step-description">Present the <span class="highlight">first candidates in 2 days.</span></p>
-                <p class="step-description">Premium time to fill: <span class="highlight">1 - 3 weeks.</span></p>
-            </div>
-            <div class="col-lg-6 col-xl-3 step">
-                <div class="step-header">
-                    <div class="step-number">3</div>
-                    <div class="step-title">Selecting</div>
-                </div>
-                <img src="./img/icons/3-process-selectC.png" alt="Selecting icon" class="img-fluid step-img">
-                <p class="step-description">Find best fits through <span class="highlight">technical, soft skills, and cultural fit assessments.</span></p>
-                <p class="step-description">Verify with relevant background checks: <span class="highlight">criminal record, ID number, employment and education verifications.</span></p>
-            </div>
-            <div class="col-lg-6 col-xl-3 step">
-                <div class="step-header">
-                    <div class="step-number">4</div>
-                    <div class="step-title">Hiring</div>
-                </div>
-                <img src="./img/icons/3-process-hireC.png" alt="Hiring icon" class="img-fluid step-img">
-                <p class="step-description">Support job offer negotiation, onboarding smooth transition,<span class="highlight"> and follow-up with managers and candidates.</span></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-        <!-- Services Section -->
-        <section id="services" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Our Specialized Services</h2>
                 <div class="row">
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet1">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h3>IT Staffing</h3>
-                        <p>We recruit skilled developers, engineers, and technicians to power your projects.</p>
+                    <div class="col-md-9 text-container">
+                        <p class="shines-intro-text">This is where <span class="highlight">TalentQuery</span> shines, we're
+                            not just recruiters, we're your strategic partners in assembling the tech dream team that <span
+                                class="highlight">will propel your business forward.</span></p>
                     </div>
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet2">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Executive Search</h3>
-                        <p>Our experts identify and place top-tier IT leaders to drive your organization forward.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet3">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Talent Advisory</h3>
-                        <p>Leverage our industry insights to optimize your hiring strategies and workforce planning.</p>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Growth Scale</h3>
-                        <p>Partner with us to effectively scale your team in alignment with your business evolving
-                            needs.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet5">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>Market Insights Report</h3>
-                        <p>Receive detailed reports on the latest trends and demands within the IT job market.</p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <div class="icon-circle colorSet6">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3>Market Salary Research</h3>
-                        <p>We provide insights into competitive salary benchmarks to attract the best talent.</p>
+                    <div class="col-md-3 text-center bg-right p-0">
+                        <img src="./img/icons/2-tq-shinesC.png" alt="TalentQuery shines image" class="img-fluid shines-img">
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
-
-        <!-- Approach -->
-        <section id="approach" class="py-5">
+        <!-- Process Section -->
+        <section class="process-section">
             <div class="container">
-                <h2 class="text-center mb-4">Our Recruiting Approach</h2>
-                <div class="timeline">
-                    <div class="timeline-step">
-                        <div class="timeline-point">1</div>
-                        <div class="timeline-content">
-                            <h3>Understand Your Needs</h3>
-                            <p>We dive deep to grasp your unique hiring requirements and company culture.</p>
+                <h2 class="process-title">Our <span class="highlight">process</span></h2>
+                <p class="process-description"><span class="highlight">Our agency drives IT success through a strategic recruitment process: </span>
+                    from custom planning and top-tier sourcing to precise selection and seamless onboarding.</p>
+                <div class="row process-steps">
+                    <div class="col-lg-6 col-xl-3 step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Strategy</div>
                         </div>
+                        <img src="./img/icons/3-process-strategyC.png" alt="Strategy icon" class="img-fluid step-img">
+                        <p class="step-description">Align recruitment processes to specific needs.</p>
+                        <p class="step-description">Guide based on Latin America market insights.</p>
                     </div>
-                    <div class="timeline-step">
-                        <div class="timeline-point">2</div>
-                        <div class="timeline-content">
-                            <h3>Targeted Sourcing</h3>
-                            <p>Our extensive network and proactive outreach connect you with top IT talent.</p>
+                    <div class="col-lg-6 col-xl-3 step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Source & screening</div>
                         </div>
+                        <img src="./img/icons/3-process-sourceC.png" alt="Source & screening icon" class="img-fluid step-img">
+                        <p class="step-description">Use top technology to <span class="highlight">access to the full reachable market.</span></p>
+                        <p class="step-description">Present the <span class="highlight">first candidates in 2 days.</span></p>
+                        <p class="step-description">Premium time to fill: <span class="highlight">1 - 3 weeks.</span></p>
                     </div>
-                    <div class="timeline-step">
-                        <div class="timeline-point">3</div>
-                        <div class="timeline-content">
-                            <h3>Rigorous Screening</h3>
-                            <p>Thorough assessments ensure the best fit for your team and goals.</p>
+                    <div class="col-lg-6 col-xl-3 step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Selecting</div>
                         </div>
+                        <img src="./img/icons/3-process-selectC.png" alt="Selecting icon" class="img-fluid step-img">
+                        <p class="step-description">Find best fits through <span class="highlight">technical, soft skills, and cultural fit assessments.</span></p>
+                        <p class="step-description">Verify with relevant background checks: <span class="highlight">criminal record, ID number, employment and education verifications.</span></p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <!-- Features -->
-
-        <section id="features" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Our Features</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet1">
-                            <img src="img/feature/featureExpertAdvisors.svg" alt="Expert Advisors"
-                                class="feature-image">
-                            <div class="feature-details">
-                                <p>Receive guidance from our seasoned consultants who understand startup dynamics and IT
-                                    demands.</p>
-                            </div>
-                            <h3 class="feature-title mb-4">Expert Advisors</h3>
+                    <div class="col-lg-6 col-xl-3 step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Hiring</div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet2">
-                            <img src="img/feature/featureTailoredRecruitment.svg" alt="Tailored Recruitment"
-                                class="feature-image">
-                            <div class="feature-details">
-                                <p>We customize our recruitment approach to match your specific staffing needs.</p>
-                            </div>
-                            <h3 class="feature-title mb-4">Tailored Recruitment</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet3">
-                            <img src="img/feature/featureDynamicSearch.svg" alt="Dynamic Search" class="feature-image">
-                            <div class="feature-details">
-                                <p>Our proactive search methodology ensures we always have a pipeline of top-tier talent
-                                    ready for your startup.</p>
-                            </div>
-                            <h3 class="feature-title mb-4">Dynamic Search</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet4">
-                            <img src="img/feature/featureEfficientHiring.svg" alt="Efficient Hiring Process"
-                                class="feature-image">
-                            <div class="feature-details">
-                                <p>Streamlined process to help you quickly find the right IT professional for your team.
-                                </p>
-                            </div>
-                            <h3 class="feature-title mb-4">Efficient Hiring Process</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet5">
-                            <img src="img/feature/featureTransparentProcess.svg" alt="Transparent Process"
-                                class="feature-image">
-                            <div class="feature-details">
-                                <p>You will have access to our ATS where at any time you will know the status of your
-                                    positions.</p>
-                            </div>
-                            <h3 class="feature-title mb-4">Transparent Process</h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="feature-card colorSet6">
-                            <img src="img/feature/featureGuaranteedResults.svg" alt="Guaranteed Results"
-                                class="feature-image">
-                            <div class="feature-details">
-                                <p>Our processes are guaranteed; if for any reason it does not work, we will replace the
-                                    position free of charge.</p>
-                            </div>
-                            <h3 class="feature-title mb-4">Guaranteed Results</h3>
-                        </div>
+                        <img src="./img/icons/3-process-hireC.png" alt="Hiring icon" class="img-fluid step-img">
+                        <p class="step-description">Support job offer negotiation, onboarding smooth transition,<span class="highlight"> and follow-up with managers and candidates.</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-
-
-
-
-        <!-- Testimonials -->
-        <!-- <section id="testimonials" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">Client Testimonials</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <blockquote class="blockquote">
-                            <p class="mb-0">TalentQuery exceeded our expectations! Their expertise in IT recruitment for
-                                startups is unparalleled.</p>
-                            <footer class="blockquote-footer">Isabella</footer>
-                        </blockquote>
-                    </div>
-                    
-                </div>
-            </div>
-        </section> -->
-
-
-
-        <!-- About Us Section -->
-        <section id="about-us" class="parallax-section">
-            <div class="parallax-bg"></div>
-            <div class="overlay"></div>
-            <div class="container py-5 text-white">
-                <h2 class="text-center mb-4 text-primary">About Us</h2>
-                <div class="row">
-                    <div class="col-md-6 about-content">
-                        <h3>Who We Are</h3>
-                        <p>
-                            We connect IT startups in Latin America with top talent. Our team understands the unique
-                            challenges
-                            and opportunities in the region. We focus on finding the right match for both companies and
-                            candidates. With extensive experience in the industry, we ensure a seamless recruitment
-                            process. Our
-                            goal is to help startups grow by providing them with skilled professionals who can
-                            contribute to
-                            their success.
-                        </p>
-                    </div>
-                    <div class="col-md-6 team-content">
-                        <div class="team-member mb-4">
-                            <i class="fas fa-user-tie fa-3x text-primary animated-icon"></i>
-                            <h4>Recruiting Experts</h4>
-                            <p>Our team brings decades of IT recruiting experience to the table.</p>
-                        </div>
-                        <div class="team-member mb-4">
-                            <i class="fas fa-industry fa-3x text-primary animated-icon"></i>
-                            <h4>Industry Insiders</h4>
-                            <p>We deeply understand the ever-evolving tech landscape and its talent needs.</p>
-                        </div>
-                        <div class="team-member mb-4">
-                            <i class="fas fa-heart fa-3x text-primary animated-icon"></i>
-                            <h4>Passionate Advisors</h4>
-                            <p>We're dedicated to delivering exceptional service and tailored solutions.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="attribution">
-                <small>Image by <a href="https://www.freepik.com" class="" target="_blank">www.freepik.com</a></small>
-            </div>
-        </section>
-
-
-
-
-
+        
 
         <!-- Contact Us -->
         <section id="contact" class="py-5">
@@ -471,8 +227,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!-- FAQs -->
         <section id="faqs" class="py-5 bg-light">
@@ -574,13 +328,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -621,10 +368,7 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
-
 
     <!-- Include Popper.js and Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
@@ -638,8 +382,6 @@
 
     <script src="js/script.js"></script>
 
-
 </body>
-
 
 </html>
