@@ -11849,7 +11849,7 @@ textarea.form-control-lg {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0;
 }
 
 html {
@@ -11888,11 +11888,8 @@ body {
 .jumbotron {
   background-color: #32323c;
   color: white;
-  padding: 100px 0;
+  padding: 60px;
   position: relative;
-}
-.jumbotron .container {
-  max-width: 1200px;
 }
 
 .jumbotron h1, .jumbotron .h1 {
@@ -11954,11 +11951,12 @@ body {
 }
 section {
   padding: 60px;
+  background-color: #32323c;
   border-bottom: 1px solid #eee;
 }
 @media (max-width: 768px) {
   section {
-    padding: 60px 0;
+    padding: 60px 40px;
   }
 }
 
@@ -11981,14 +11979,48 @@ section p {
   line-height: 1.5;
 }
 
-.market-opportunities-section {
-  background-color: #32323c;
-  padding: 60px 0;
+.expertise-section .section-title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.market-opportunities-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
+.expertise-section .section-content {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 40px;
 }
+.expertise-section .expertise-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expertise-section .expertise-images .expertise-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+.expertise-section .expertise-images .sdlc-image {
+  width: 100%;
+  max-width: 750px;
+}
+.expertise-section .expertise-images .stack-image {
+  max-width: 330px;
+}
+@media (min-width: 992px) {
+  .expertise-section .expertise-images .col-lg-6 {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .expertise-section .stack-image {
+    padding-top: 30px;
+  }
+}
+
 .market-opportunities-section .section-title {
   color: #ffffff;
   font-size: 2rem;
@@ -12012,11 +12044,6 @@ section p {
     text-align: right;
   }
 }
-.issues-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .bg-left {
   display: flex;
   justify-content: center;
@@ -12114,10 +12141,6 @@ section p {
   display: flex;
   align-items: center;
 }
-.shines-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .bg-right {
   display: flex;
@@ -12153,14 +12176,6 @@ section p {
   .shines-section .shines-img {
     padding: 2rem;
   }
-}
-.process-section {
-  padding: 60px 0;
-  background-color: #32323c;
-}
-.process-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 .process-section .process-title {
   text-align: center;
@@ -12269,11 +12284,6 @@ section p {
 #contact {
   background: #f8f9fa;
   color: #32323c;
-  padding: 60px 0;
-}
-#contact .container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 #contact h2, #contact .h2 {
   font-size: 2.5rem;
@@ -12331,10 +12341,6 @@ section p {
   margin: 0 10px;
 }
 
-#faqs .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 #faqs .faq-questions,
 #faqs .faq-answers {
   padding: 15px;
@@ -12678,11 +12684,11 @@ section p {
 .footer {
   background-color: #32323c;
   color: white;
-  padding: 40px 0;
+  padding: 60px;
 }
-.footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
+
+.footer-col {
+  padding-bottom: 30px;
 }
 
 .footer h3, .footer .h3 {

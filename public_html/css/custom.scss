@@ -38,7 +38,7 @@ $spacer: 1rem;
 .container {
     max-width: 1200px; // Limit the width to a reasonable size
     margin: 0 auto; // Center the container
-    padding: 0 15px; // Add some padding for the sides
+    padding: 0;
 }
 
 // **********  Global **********
@@ -90,11 +90,8 @@ $navbar-brand-hover-color: $white;
 .jumbotron {
     background-color: #32323c;
     color: white;
-    padding: 100px 0;
+    padding: 60px;
     position: relative;
-    .container {
-        max-width: 1200px;
-    }
 }
 
 .jumbotron h1 {
@@ -162,10 +159,11 @@ $navbar-brand-hover-color: $white;
 
 section {
     padding: 60px;
+    background-color: $secondary;
     border-bottom: 1px solid #eee;
 
     @media (max-width: 768px) {
-        padding: 60px 0;
+        padding: 60px 40px;
     }
 }
 
@@ -188,16 +186,71 @@ section p {
     line-height: 1.5;
 }
 
+
+
+// ********** Our Expertise **********
+
+.expertise-section {
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .section-content {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .expertise-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .expertise-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .sdlc-image {
+            width: 100%;
+            max-width: 750px;
+        }
+
+        .stack-image {
+            max-width: 330px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .expertise-images {
+            .col-lg-6 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .stack-image {
+            padding-top: 30px;
+        }
+    }
+}
+
+
+
+
+
+
 // **********  Market Opportunities  **********
 
 .market-opportunities-section {
-    background-color: $secondary;
-    padding: 60px 0;
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
     .section-title {
         color: $white;
@@ -230,13 +283,6 @@ section p {
 
 
 // **********  Issues  **********
-
-.issues-section {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
 
 .bg-left {
     display: flex;
@@ -344,11 +390,6 @@ section p {
 .shines-section {
     display: flex;
     align-items: center;
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 }
 
 .bg-right {
@@ -396,14 +437,6 @@ $processColor3: rgba(116, 251, 121, .70); // color for step 1
 $processColor4: rgba(209, 255, 10, .70); // color for step 1
 
 .process-section {
-    padding: 60px 0;
-    background-color: $dark;
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
     .process-title {
         text-align: center;
         color: $white;
@@ -531,12 +564,6 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 #contact {
     background: #f8f9fa;
     color: $dark;
-    padding: 60px 0;
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
     h2 {
         font-size: 2.5rem;
@@ -608,10 +635,6 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 // **********  FAQs  **********
 
 #faqs {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
     .faq-questions,
     .faq-answers {
@@ -987,12 +1010,11 @@ $extra2: #444444;
 .footer {
     background-color: #32323c;
     color: white;
-    padding: 40px 0;
+    padding: 60px;
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.footer-col {
+    padding-bottom: 30px;
 }
 
 .footer h3 {
