@@ -12336,6 +12336,57 @@ section p {
   }
 }
 
+.why-talentquery-section .section-title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.why-talentquery-section .whyTitles {
+  color: #8cfa69;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.why-talentquery-section .section-content {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.why-talentquery-section .benefits-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.why-talentquery-section .benefits-content .benefit-item {
+  padding: 15px;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.why-talentquery-section .benefits-content .benefit-item p {
+  margin-bottom: 20px;
+}
+.why-talentquery-section .benefits-content .benefit-item .highlight {
+  color: #8cfa69;
+}
+@media (max-width: 768px) {
+  .why-talentquery-section .whyTitles {
+    margin-top: 0;
+  }
+  .why-talentquery-section .benefits-content {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .why-talentquery-section .benefits-content .benefit-item {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 #contact {
   background: #f8f9fa;
   color: #32323c;

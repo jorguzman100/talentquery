@@ -635,6 +635,75 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 
 
 
+
+// ********** Why Choose TalentQuery **********
+
+.why-talentquery-section {
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .whyTitles {
+        color: $success;
+        margin-top: 15px; // Reduced to keep spacing consistent
+        margin-bottom: 5px;
+    }
+
+    .section-content {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .benefits-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .benefit-item {
+            padding: 15px;
+            color: $white;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 30px; // Ensure spacing between rows
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .highlight {
+                color: $success;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .whyTitles {
+            margin-top: 0;
+        }
+
+        .benefits-content {
+            flex-direction: column;
+            padding-left: 10px;
+            .benefit-item {
+                text-align: left;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
 // **********  Contact Us  **********
 
 // Contact Us Styles
