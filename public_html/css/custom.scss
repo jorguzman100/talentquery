@@ -690,11 +690,131 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
         .benefits-content {
             flex-direction: column;
             padding-left: 10px;
+
             .benefit-item {
                 text-align: left;
                 margin: 0;
                 padding: 0;
             }
+        }
+    }
+}
+
+
+
+
+// ********** Recruitment Plans **********
+
+.recruitment-plans-section {
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .section-content {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .plan-card {
+        background-color: rgba($white, 0.1);
+        color: $white;
+        border-radius: 20px;
+        width: 270px;
+        min-height: 450px; // Set the same height for all cards
+        line-height: 2;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; // Ensure equal height for all cards
+
+        .card-header,
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-footer {
+            padding: 20px;
+            color: $secondary;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px; // Rounded corners for the footer
+            margin-top: auto; // Push the footer to the bottom of the card
+        }
+
+        .plan-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center; // Center align the title
+        }
+
+        .plan-subtitle {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-align: left;
+            color: $success;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            text-align: left; // Left align the list items
+        }
+
+        .highlight {
+            color: $success;
+        }
+    }
+
+    .standard-plan {
+        .plan-title, .plan-subtitle {
+            color: $white;
+        }
+
+        .card-footer {
+            background-color: $white; // Standard plan footer color
+        }
+    }
+
+    .premium-plan {
+        .plan-title, .plan-subtitle {
+            color: $primary;
+        }
+
+        .card-footer {
+            background-color: $primary; // Premium plan footer color
+        }
+    }
+
+    .custom-plan {
+        .plan-title {
+            color: $info;
+        }
+
+        .card-footer {
+            background-color: $info; // Custom plan footer color
+        }
+    }
+
+    .plan-notes {
+        color: $success;
+        font-size: 1rem;
+        margin-top: 20px;
+        text-align: left; // Left align the notes
+    }
+
+    @media (max-width: 768px) {
+        .plan-col {
+            margin-bottom: 20px;
+            width: 399px; // Make the card 75% wide on small screens
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
