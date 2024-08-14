@@ -437,6 +437,7 @@ $processColor3: rgba(116, 251, 121, .70); // color for step 1
 $processColor4: rgba(209, 255, 10, .70); // color for step 1
 
 .process-section {
+
     .process-title {
         text-align: center;
         color: $white;
@@ -465,8 +466,9 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
             padding: 0 30px;
             position: relative; // Add position relative to parent
 
-            @media (max-width: 992px) {
-                padding: 0 20%;
+            @media (max-width: 1200px) {
+                padding: 0 30px;
+                max-width: 369px;
             }
 
             .step-number {
@@ -484,8 +486,8 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
                 left: 20px; // Adjust to fit the title alignment
                 z-index: 2; // Ensure the number is above the title
 
-                @media (max-width: 992px) {
-                    left: 20%;
+                @media (max-width: 1200px) {
+                    left: 30px;
                 }
             }
 

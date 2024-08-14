@@ -12202,9 +12202,10 @@ section p {
   padding: 0 30px;
   position: relative;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .process-section .process-steps .step {
-    padding: 0 20%;
+    padding: 0 30px;
+    max-width: 369px;
   }
 }
 .process-section .process-steps .step .step-number {
@@ -12222,9 +12223,9 @@ section p {
   left: 20px;
   z-index: 2;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .process-section .process-steps .step .step-number {
-    left: 20%;
+    left: 30px;
   }
 }
 .process-section .process-steps .step:nth-child(1) .step-title {
