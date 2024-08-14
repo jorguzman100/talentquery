@@ -558,6 +558,81 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
 }
 
 
+
+
+// ********** Meet TalentQuery **********
+
+.meet-talentquery-section {
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .section-content {
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .meet-content {
+        .team-image {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .sub-title {
+            color: $white;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .core-value {
+            color: $white;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .meet-content {
+            display: flex;
+            flex-direction: column;
+
+            .team-image {
+                width: 60%;
+                max-width: 270px;
+                margin-bottom: 20px;
+                align-self: center; // Center the image
+            }
+
+            .meet1 {
+                order: 1; // Ensure the team appears 1st
+            }
+
+            .meet2 {
+                order: 2; // Ensure values appears 2nd
+                padding-top: 21px;
+            }
+
+            .meet3 {
+                padding-top: 21px;
+                order: 3; // Ensure image appears 3rd
+            }
+        }
+    }
+}
+
+
+
+
+
 // **********  Contact Us  **********
 
 // Contact Us Styles
