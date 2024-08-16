@@ -11952,7 +11952,7 @@ body {
 section {
   padding: 60px;
   background-color: #32323c;
-  border-bottom: 1px solid #eee;
+  /* border-bottom: 1px solid #eee; */
 }
 @media (max-width: 768px) {
   section {
@@ -12565,66 +12565,70 @@ section p {
   }
 }
 
-#contact {
-  background: #f8f9fa;
-  color: #32323c;
-}
 #contact h2, #contact .h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #32323c;
+  font-size: 2rem;
+  color: #8cfa69;
   margin-bottom: 20px;
 }
 #contact p {
   font-size: 1.2rem;
-  color: #32323c;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 #contact .contact-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
-#contact .contact-info .contact-method {
-  background: rgba(50, 50, 60, 0.9);
+#contact .contact-method {
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  width: 100%;
-  max-width: 300px;
   margin: 10px;
+  max-width: 40%;
 }
-#contact .contact-info .contact-method:hover {
+#contact .contact-method:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-#contact .contact-info .contact-method i {
+#contact .contact-method i {
   margin-bottom: 15px;
 }
-#contact .contact-info .contact-method h3, #contact .contact-info .contact-method .h3 {
+#contact .contact-method h3, #contact .contact-method .h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #dee3e6;
   margin-bottom: 10px;
 }
-#contact .contact-info .contact-method p {
+#contact .contact-method p {
   color: #ccc;
   font-size: 1rem;
   line-height: 1.5;
 }
-#contact .contact-info .contact-method a {
+#contact .contact-method a {
   color: #8cfa69;
   text-decoration: none;
 }
-#contact .contact-info .contact-method a:hover {
+#contact .contact-method a:hover {
   text-decoration: underline;
 }
-#contact .contact-info .contact-method a i {
+#contact .contact-method a i {
   margin: 0 10px;
 }
+@media (max-width: 992px) {
+  #contact .contact-method {
+    width: 75%;
+    padding: 15px 9px;
+  }
+}
 
+#faqs {
+  color: #ffffff;
+}
 #faqs .faq-questions,
 #faqs .faq-answers {
   padding: 15px;
@@ -12632,14 +12636,11 @@ section p {
 #faqs .faq-questions .faq-item {
   padding: 15px 0;
   cursor: pointer;
-  border-bottom: 1px solid #ddd;
   transition: background-color 0.3s, border-left 0.3s;
   position: relative;
 }
 #faqs .faq-questions .faq-item .faq-question {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #32323c;
+  font-size: 1rem;
   display: flex;
   align-items: center;
 }
@@ -12654,8 +12655,8 @@ section p {
   position: relative;
 }
 #faqs .faq-answers .faq-answer {
-  font-size: 1.2rem;
-  color: #32323c;
+  font-size: 1rem;
+  color: #ffffff;
   padding: 20px;
   border-left: 5px solid #8cfa69;
   background-color: rgba(140, 250, 105, 0.2);
@@ -12676,8 +12677,7 @@ section p {
 @media (max-width: 768px) {
   #faqs .faq-answers .faq-answer {
     border-left: none;
-    background-color: transparent;
-    padding-left: 0;
+    background-color: rgba(140, 250, 105, 0.2);
     margin-bottom: 0;
     position: relative;
     width: auto;
@@ -12690,8 +12690,8 @@ section p {
   right: 25px;
   width: 50px;
   height: 50px;
-  background-color: rgba(209, 255, 10, 0.5);
-  color: #32323c;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #D1FF0A;
   border: none;
   border-radius: 50%;
   text-align: center;
@@ -12705,7 +12705,8 @@ section p {
   z-index: 5;
 }
 .scroll-to-top:hover {
-  background-color: #dbff3d;
+  background-color: #d1ff0a;
+  color: #32323c;
 }
 .scroll-to-top i {
   pointer-events: none;
@@ -12722,7 +12723,7 @@ section p {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  background: linear-gradient(135deg, #D1FF0A 0%, #FFFFFF 200%);
+  background: #D1FF0A;
   /* Adjusted gradient */
   color: #32323c;
   border-radius: 50%;
@@ -12978,6 +12979,7 @@ section p {
 .footer h3, .footer .h3 {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: #8cfa69;
 }
 
 .footer ul {
