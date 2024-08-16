@@ -6,7 +6,7 @@
 $primary: #D1FF0A;
 $secondary: #32323cff;
 $success: #8cfa69ff;
-$info: #6ecdfaff;
+$info: #00b1f0;
 $warning: #fafa7dff;
 $danger: #f0a069ff;
 $light: #dee3e6;
@@ -21,6 +21,12 @@ $chartColor1: #a581e0;
 $chartColor2: #6931c7;
 $chartColor3: #9393ed;
 $chartColor4: #4a4ce1;
+
+$processColor1: rgba(255, 255, 255, .25); // color for step 1
+$processColor2: $info; // color for step 1
+$processColor3: rgba(116, 251, 121, .70); // color for step 1
+$processColor4: rgba(209, 255, 10, .70); // color for step 1
+
 
 // Override navbar active link color
 $navbar-active-color: white;
@@ -431,11 +437,6 @@ section p {
 
 // **********  Process  **********
 
-$processColor1: rgba(255, 255, 255, .25); // color for step 1
-$processColor2: rgba(0, 177, 240, .75); // color for step 1
-$processColor3: rgba(116, 251, 121, .70); // color for step 1
-$processColor4: rgba(209, 255, 10, .70); // color for step 1
-
 .process-section {
 
     .process-title {
@@ -773,7 +774,9 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
     }
 
     .standard-plan {
-        .plan-title, .plan-subtitle {
+
+        .plan-title,
+        .plan-subtitle {
             color: $white;
         }
 
@@ -783,7 +786,9 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
     }
 
     .premium-plan {
-        .plan-title, .plan-subtitle {
+
+        .plan-title,
+        .plan-subtitle {
             color: $primary;
         }
 
@@ -815,6 +820,114 @@ $processColor4: rgba(209, 255, 10, .70); // color for step 1
             width: 399px; // Make the card 75% wide on small screens
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+}
+
+
+
+
+// ********** Comprehensive Hiring Solutions **********
+
+.comprehensive-hiring-section {
+    .section-title {
+        color: $white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-text {
+        color: $danger;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-top: 21px;
+        margin-bottom: 10px;
+    }
+
+    .features-list,
+    .solutions-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        color: $white;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    .sub-features-list {
+        list-style: disc;
+        padding-left: 40px;
+
+        li {
+            margin-bottom: 0px;
+        }
+    }
+
+    .highlight {
+        color: $danger;
+    }
+
+    .hire-icon {
+        width: 100%;
+        max-width: 210px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 992px) {
+        .comprehensive-content {
+            flex-direction: column;
+        }
+
+        .comprehensive-content {
+            flex-direction: column;
+        }
+
+        .content-column {
+            order: 1;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .solutions-column {
+            order: 2;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .content-text {
+            margin-top: 21px;
+        }
+
+        .image-column {
+            order: 3; // Ensure the image appears last on smaller screens
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+        }
+
+        .hire-icon {
+            width: 60%;
+            max-width: 200px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .comprehensive-content {
+            align-items: center;
+        }
+
+        .content-text,
+        .features-list,
+        .solutions-list {
+            text-align: left;
         }
     }
 }
