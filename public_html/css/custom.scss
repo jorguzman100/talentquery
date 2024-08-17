@@ -176,7 +176,7 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-size: 1.5rem; // Increase from 1.2rem
+    font-size: 2rem; // Increase from 1.2rem
 }
 
 section h3 {
@@ -290,6 +290,14 @@ section p {
 
 // **********  Issues  **********
 
+#challenges .highlight {
+    color: $lightPurple;
+}
+
+#challenges .section-title {
+    font-size: 2rem;
+}
+
 .bg-left {
     display: flex;
     justify-content: center;
@@ -308,7 +316,7 @@ section p {
 }
 
 .issues-intro-text1 {
-    color: $lightPurple;
+    color: $white;
     font-size: 1.2rem;
 }
 
@@ -581,6 +589,10 @@ section p {
         margin-bottom: 40px;
     }
 
+    .highlight {
+        color: $primary;
+    }
+
     .meet-content {
         .team-image {
             width: 100%;
@@ -589,7 +601,7 @@ section p {
         }
 
         .sub-title {
-            color: $white;
+            color: $primary;
             font-size: 1.5rem;
             margin-bottom: 15px;
             text-align: left;
@@ -645,6 +657,9 @@ section p {
         font-size: 2rem;
         margin-bottom: 20px;
         text-align: center;
+        .highlight {
+            color: $success;
+        }
     }
 
     .whyTitles {

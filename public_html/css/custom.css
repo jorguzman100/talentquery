@@ -11963,7 +11963,7 @@ section {
 section h2, section .h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 section h3, section .h3 {
@@ -12044,6 +12044,14 @@ section p {
     text-align: right;
   }
 }
+#challenges .highlight {
+  color: #8585f1;
+}
+
+#challenges .section-title {
+  font-size: 2rem;
+}
+
 .bg-left {
   display: flex;
   justify-content: center;
@@ -12062,7 +12070,7 @@ section p {
 }
 
 .issues-intro-text1 {
-  color: #8585f1;
+  color: #ffffff;
   font-size: 1.2rem;
 }
 
@@ -12295,13 +12303,16 @@ section p {
   text-align: left;
   margin-bottom: 40px;
 }
+.meet-talentquery-section .highlight {
+  color: #D1FF0A;
+}
 .meet-talentquery-section .meet-content .team-image {
   width: 100%;
   max-width: 300px;
   margin-bottom: 30px;
 }
 .meet-talentquery-section .meet-content .sub-title {
-  color: #ffffff;
+  color: #D1FF0A;
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-align: left;
@@ -12341,6 +12352,9 @@ section p {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
+}
+.why-talentquery-section .section-title .highlight {
+  color: #8cfa69;
 }
 .why-talentquery-section .whyTitles {
   color: #8cfa69;
