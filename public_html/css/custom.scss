@@ -194,6 +194,42 @@ section p {
 
 
 
+
+
+// ********** Launguage selector **********
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0 15px;
+}
+
+.language-selector button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.language-selector button:hover {
+    transform: scale(1.2);
+}
+
+.language-selector button:focus {
+    outline: none;
+}
+
+.language-selector button.active {
+    border-bottom: 2px solid #D1FF0A; /* Matches your primary color */
+}
+
+
+
+
 // ********** Our Expertise **********
 
 .expertise-section {

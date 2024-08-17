@@ -1,5 +1,67 @@
 // script.js
 
+// ********** Language selector **********
+
+const getCountryCode = async () => {
+    try {
+        const response = await fetch('https://ipinfo.io/json?token=YOUR_API_TOKEN');
+        const data = await response.json();
+        return data.country;
+    } catch (error) {
+        console.error('Error fetching country code:', error);
+        return 'US'; // default to US if there's an error
+    }
+};
+
+const loadLanguageContent = async (lang) => {
+    try {
+        const response = await fetch(`./lang/content.${lang}.json`);
+        const content = await response.json();
+        updateContent(content);
+    } catch (error) {
+        console.error('Error loading language content:', error);
+    }
+};
+
+const updateContent = (content) => {
+    // Example: update the content on the page
+    document.querySelector('#home').innerText = content.home;
+    document.querySelector('#aboutUs').innerText = content.aboutUs;
+    // Continue updating other parts of your website with the language content
+};
+
+const updateLanguageButtons = (lang) => {
+    document.querySelectorAll('.language-selector button').forEach(button => {
+        button.classList.remove('active');
+    });
+    document.getElementById(`lang-${lang}`).classList.add('active');
+};
+
+const setLanguage = async () => {
+    const savedLang = localStorage.getItem('lang');
+    let userLang = savedLang || navigator.language || navigator.userLanguage;
+
+    if (!savedLang) {
+        const countryCode = await getCountryCode();
+        userLang = countryCode === 'ES' ? 'es' : 'en';
+    }
+
+    await loadLanguageContent(userLang);
+    updateLanguageButtons(userLang);
+    localStorage.setItem('lang', userLang);
+};
+
+const changeLanguage = async (lang) => {
+    localStorage.setItem('lang', lang);
+    await loadLanguageContent(lang);
+    updateLanguageButtons(lang);
+};
+
+document.addEventListener('DOMContentLoaded', setLanguage);
+
+
+
+
 // ********** Initialize Google Analytics **********
 
 window.dataLayer = window.dataLayer || [];
