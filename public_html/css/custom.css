@@ -11962,7 +11962,7 @@ section {
 
 section h2, section .h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 2rem;
 }
 
@@ -11989,7 +11989,7 @@ section p {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 .expertise-section .expertise-images {
@@ -12059,22 +12059,22 @@ section p {
   padding: 4rem;
 }
 
-.issues-img {
+.challenges-img {
   min-width: 200px;
   max-width: 200px;
   margin: 30px;
 }
 
-.text-container {
+.textsCol {
   padding: 40px;
 }
 
-.issues-intro-text1 {
+.challenges-intro-text1 {
   color: #ffffff;
   font-size: 1.2rem;
 }
 
-.issues-intro-text2 {
+.challenges-intro-text2 {
   color: #ffffff;
   margin-bottom: 2rem;
   font-size: 1.2rem;
@@ -12129,6 +12129,20 @@ section p {
 }
 
 @media (max-width: 768px) {
+  .imageCol {
+    order: 2;
+  }
+  .textsCol {
+    order: 1;
+    margin: 0;
+    padding: 0;
+  }
+  .challenges-img {
+    margin: 20px 0 30px;
+  }
+  .challenges-intro-text2 {
+    margin-bottom: 0;
+  }
   .canvas-container .row {
     flex-direction: column;
     text-align: start;
@@ -12145,6 +12159,10 @@ section p {
     margin-left: 30px;
   }
 }
+.section-title {
+  margin-bottom: 20px;
+}
+
 .shines-section {
   display: flex;
   align-items: center;
@@ -12182,13 +12200,15 @@ section p {
     height: auto;
   }
   .shines-section .shines-img {
-    padding: 2rem;
+    padding: 0;
+    margin: 0;
   }
 }
 .process-section .process-title {
   text-align: center;
   color: #ffffff;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 .process-section .process-title .highlight {
   color: #D1FF0A;
@@ -12365,7 +12385,7 @@ section p {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 .why-talentquery-section .benefits-content {
@@ -12411,7 +12431,7 @@ section p {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 .recruitment-plans-section .plan-card {
