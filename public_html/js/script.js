@@ -1,63 +1,67 @@
 // script.js
 
-// ********** Language selector **********
+// ********** Language setup **********
 
-const getCountryCode = async () => {
-    try {
-        const response = await fetch('https://ipinfo.io/json?token=YOUR_API_TOKEN');
-        const data = await response.json();
-        return data.country;
-    } catch (error) {
-        console.error('Error fetching country code:', error);
-        return 'US'; // default to US if there's an error
-    }
-};
+document.addEventListener('DOMContentLoaded', function () {
+    const savedLanguage = localStorage.getItem('lang');
+    const userLanguage = savedLanguage || navigator.language || navigator.userLanguage;
+    const language = userLanguage.startsWith('es') ? 'es' : 'en';
 
-const loadLanguageContent = async (lang) => {
-    try {
-        const response = await fetch(`./lang/content.${lang}.json`);
-        const content = await response.json();
-        updateContent(content);
-    } catch (error) {
-        console.error('Error loading language content:', error);
-    }
-};
+    console.log('userLanguage:', userLanguage);
 
-const updateContent = (content) => {
-    // Example: update the content on the page
-    document.querySelector('#home').innerText = content.home;
-    document.querySelector('#aboutUs').innerText = content.aboutUs;
-    // Continue updating other parts of your website with the language content
-};
+    loadLanguageContent(language);
 
-const updateLanguageButtons = (lang) => {
-    document.querySelectorAll('.language-selector button').forEach(button => {
-        button.classList.remove('active');
+    document.getElementById('lang-en').addEventListener('click', () => {
+        changeLanguage('en');
     });
-    document.getElementById(`lang-${lang}`).classList.add('active');
-};
 
-const setLanguage = async () => {
-    const savedLang = localStorage.getItem('lang');
-    let userLang = savedLang || navigator.language || navigator.userLanguage;
+    document.getElementById('lang-es').addEventListener('click', () => {
+        changeLanguage('es');
+    });
+});
 
-    if (!savedLang) {
-        const countryCode = await getCountryCode();
-        userLang = countryCode === 'ES' ? 'es' : 'en';
-    }
+function loadLanguageContent(lang) {
+    fetch(`/lang/content.${lang}.json`)
+        .then(response => response.json())
+        .then(content => {
+            console.log('Loaded content:', content);
 
-    await loadLanguageContent(userLang);
-    updateLanguageButtons(userLang);
-    localStorage.setItem('lang', userLang);
-};
+            // Iterate over each key-value pair in the content object
+            for (const [id, text] of Object.entries(content)) {
+                updateElement(id, text);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading language content:', error);
+        });
 
-const changeLanguage = async (lang) => {
-    localStorage.setItem('lang', lang);
-    await loadLanguageContent(lang);
     updateLanguageButtons(lang);
-};
+}
 
-document.addEventListener('DOMContentLoaded', setLanguage);
+function updateElement(id, text) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.innerHTML = text;
+    } else {
+        console.error(`Element with ID '${id}' not found.`);
+    }
+}
+
+function changeLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    loadLanguageContent(lang);
+}
+
+function updateLanguageButtons(lang) {
+    document.getElementById('lang-en').classList.remove('active');
+    document.getElementById('lang-es').classList.remove('active');
+
+    if (lang === 'en') {
+        document.getElementById('lang-en').classList.add('active');
+    } else {
+        document.getElementById('lang-es').classList.add('active');
+    }
+}
 
 
 
