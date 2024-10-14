@@ -12750,6 +12750,7 @@ section p {
 .scroll-to-top {
   position: fixed;
   bottom: 220px;
+  bottom: 120px;
   right: 25px;
   width: 50px;
   height: 50px;
@@ -12793,6 +12794,7 @@ section p {
   width: 60px;
   height: 60px;
   display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   font-size: 30px;
