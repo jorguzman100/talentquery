@@ -1,14 +1,14 @@
 {
   "name": "talentquery",
   "version": "1.0.0",
-  "description": "IT Recruiting Agency Website",
-  "main": "server.mjs",
+  "description": "Bilingual IT recruiting agency website with a chatbot contact assistant",
+  "main": "server/server.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass public_html/css/custom.scss public_html/css/custom.css",
-    "build": "npm install && npm run build-css",
-    "start": "node server.mjs"
+    "build-css": "sass client/css/custom.scss client/css/custom.css",
+    "build": "npm run build-css",
+    "start": "node server/server.mjs"
   },
   "author": "Jorge Guzman",
   "license": "ISC",
@@ -22,5 +22,8 @@
     "openai": "^4.49.1",
     "sass": "^1.77.4"
   },
-  "keywords": []
+  "keywords": [],
+  "engines": {
+    "node": ">=18"
+  }
 }

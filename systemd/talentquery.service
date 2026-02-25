@@ -6,7 +6,8 @@ After=network.target
 EnvironmentFile=/etc/environment
 Type=simple
 User=root
-ExecStart=/usr/bin/node /var/www/talentquery/server.mjs
+WorkingDirectory=/var/www/talentquery
+ExecStart=/usr/bin/node /var/www/talentquery/server/server.mjs
 Restart=on-failure
 
 [Install]

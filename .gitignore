@@ -2,9 +2,13 @@ node_modules/
 dist/
 build/
 .DS_Store
+.DS_Store?
+**/.DS_Store
+Thumbs.db
 .env
 .env.local
 info.txt
+info.sh
 
 
 # Logs
