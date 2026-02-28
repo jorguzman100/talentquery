@@ -15,7 +15,6 @@ TalentQuery is a marketing website for an IT recruiting agency focused on hiring
 | 📈 | Interactive stats | Renders hiring-market charts with Chart.js for the challenges section. |
 | 📱 | Responsive layout | Mobile-friendly landing page sections built with Bootstrap + custom styles. |
 | 📬 | Contact-first CTA flow | Email, WhatsApp, LinkedIn, and calendar booking links are built into the page. |
-| 🚀 | Deploy-ready structure | Clean `client/` + `server/` layout with env-based config and `PORT` support. |
 
 ---
 
@@ -52,10 +51,11 @@ TalentQuery is a marketing website for an IT recruiting agency focused on hiring
 
 ## 🚀 Live Demo
 
-![Deployment](https://img.shields.io/badge/Deployment-Not%20deployed%20yet-lightgrey?style=for-the-badge)
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/jorguzman100/talentquery)
-
-No public deployment yet. Local run is the current path.
+<p align="center">
+  <a href="https://talentquery.onrender.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live%20Demo-talentquery.onrender.com-22c55e?style=for-the-badge&logo=render&logoColor=white" alt="Live demo on Render" />
+  </a>
+</p>
 
 ---
 
@@ -84,13 +84,9 @@ PORT=3000
 
 # Optional
 OPENAI_MODEL=gpt-4o-mini
-ALLOWED_ORIGINS=http://localhost:3000,https://talentquery.io,https://www.talentquery.io
+ALLOWED_ORIGINS=http://localhost:3000,https://talentquery.io,https://www.talentquery.io,https://talentquery.onrender.com
 ```
 </details>
-
-Notes:
-
-- If `OPENAI_API_KEY` is missing, the website still runs, but the chatbot endpoint returns a setup message.
 
 ---
 

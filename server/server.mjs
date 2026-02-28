@@ -20,7 +20,7 @@ const openaiModel = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
 const allowedOrigins = (process.env.ALLOWED_ORIGINS ||
-  'http://localhost:3000,https://talentquery.io,https://www.talentquery.io')
+  'http://localhost:3000,https://talentquery.io,https://www.talentquery.io,https://talentquery.onrender.com')
   .split(',')
   .map((origin) => origin.trim())
   .filter(Boolean);
@@ -64,6 +64,7 @@ app.use(
           "'self'",
           'https://talentquery.io',
           'https://www.talentquery.io',
+          'https://talentquery.onrender.com',
           'https://www.google-analytics.com',
           'https://region1.google-analytics.com',
         ],
