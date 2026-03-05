@@ -52,7 +52,7 @@ TalentQuery is a marketing website for an IT recruiting agency focused on hiring
 
 ## 🚀 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-TalentQuery-22c55e?style=for-the-badge)](talentquery.onrender.com/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-TalentQuery-22c55e?style=for-the-badge)](https://talentquery.onrender.com/)
 
 [![Visit Portfolio](https://img.shields.io/badge/Visit%20My%20Portfolio-jorgeguzman.dev-22c55e?style=for-the-badge)](https://portfolio.jorgeguzman.dev/)
 
