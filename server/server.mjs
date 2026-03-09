@@ -67,6 +67,8 @@ app.use(
           'https://talentquery.onrender.com',
           'https://www.google-analytics.com',
           'https://region1.google-analytics.com',
+          'https://cdnjs.cloudflare.com',
+          'https://cdn.jsdelivr.net',
         ],
       },
     },
